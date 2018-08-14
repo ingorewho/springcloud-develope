@@ -1,0 +1,21 @@
+server:
+  port: 7005
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ingorewho/springcloud-develope/
+          search-paths: config
+          username: 17761256463
+          password: slxrzq606729
+
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:7000/eureka/
+
+
+
