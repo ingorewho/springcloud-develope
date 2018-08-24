@@ -1,7 +1,11 @@
 package jdk1_8.lambda;
 
+import com.sun.org.apache.xerces.internal.xs.StringList;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 /**
  * @Author: rzq
@@ -29,18 +33,46 @@ public class ListOperateService
 		data.stream().forEach(item -> System.out.println(item));
 	}
 
+	/**
+	 * 中间操作map将元素根据指定的Function接口来将元素转成另外的元素
+	 * @param data .
+	 */
+	public static void streamMap(List<String> data)
+	{
+		List<String> result = data.stream().map(item -> item.toUpperCase()).collect(Collectors.toList());
+		result.stream().forEach(item -> System.out.println(item));
+	}
+
+	/**
+	 * 中间操作filter用于过滤元素
+	 * @param data .
+	 */
+	public static void streamFilter(List<String> data)
+	{
+		List<String> result = data.stream().filter(item -> item != null && !item.equals("test")).collect(Collectors.toList());
+		result.forEach(item -> System.out.println(item));
+	}
+
+
 
 	public static void main(String[] args)
 	{
 	    List<String> data = new ArrayList<>();
-	    data.add("1");
-	    data.add("2");
+	    data.add("xiaoming");
+	    data.add("lisan");
+	    data.add("test");
 
 	    //测试List.forEach
 		forEach(data);
 
 		//测试Stream.forEach
 		streamForEach(data);
+
+		//测试Stream.map
+		streamMap(data);
+
+		//测试Stream.filter
+		streamFilter(data);
 	}
 
 }
