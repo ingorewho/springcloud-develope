@@ -64,14 +64,16 @@ public class StreamOperateService
 
 	/**
 	 * 中间操作：flatMap用于处理一对多映射的关系
+	 * 将多个流扁平化成一个流
 	 */
 	public static void streamFlatMap()
 	{
-		List<String> data1 = Arrays.asList("1");
-		List<String> data2 = Arrays.asList("2", "3");
-		Stream<List<String>> stream = Stream.of(data1, data2);
-		Stream<String> stream2 = stream.flatMap(item -> item.stream());
-		stream2.forEach(item -> System.out.println(item));
+		String[] str = new String[]{"123", "456"};
+		List<String[]> result1 = Arrays.stream(str).map(item -> item.split("")).distinct().collect(Collectors.toList());
+		result1.forEach(System.out::println);
+
+		List<String> result2 = Arrays.stream(str).map(item->item.split("")).flatMap(Arrays::stream).distinct().collect(Collectors.toList());
+		result2.forEach(System.out::println);
 	}
 
 	/**
@@ -179,6 +181,16 @@ public class StreamOperateService
 		Stream.iterate(1, n -> n + 2).limit(10).forEach(item -> System.out.println("iterate: " + item));
 	}
 
+	/**
+	 * 双冒号地使用，将方法作为参数传入，流中每个元素都执行一遍该方法
+	 * 书写方式：类名::方法名
+	 */
+	public static void doubleColon()
+	{
+		Stream<String> data = Stream.of("abc");
+		List<String> result = data.map(String::toUpperCase).collect(Collectors.toList());
+		result.forEach(System.out::println);
+	}
 	public static void main(String[] args)
 	{
 	    List<String> data = new ArrayList<>();
@@ -215,6 +227,8 @@ public class StreamOperateService
 		streamGenerate();
 		//测试Stream.iterate
 		streamIterate();
+		//测试双冒号使用
+		doubleColon();
 	}
 
 }

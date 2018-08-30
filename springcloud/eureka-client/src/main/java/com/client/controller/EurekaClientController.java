@@ -1,7 +1,8 @@
 package com.client.controller;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * @Author: rzq
@@ -10,11 +11,16 @@ import org.springframework.web.bind.annotation.RestController;
  * @Modified By:
  */
 @RestController
+@RequestMapping(value = "eureka")
 public class EurekaClientController
 {
-	@PostMapping(value = "/hello")
-	public String service(String json)
+	@Autowired
+	private RestTemplate restTemplate;
+
+	@GetMapping(value = "/hello")
+	public String service()
 	{
-		return "收到信息:" + json;
+		String result = restTemplate.getForEntity("http://hystrix-server/producer/service", String.class).getBody();
+		return result;
 	}
 }
