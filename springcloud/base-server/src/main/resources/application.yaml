@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: base-server
+  aop:
+    proxy-target-class: true
 
 eureka:
   client:
