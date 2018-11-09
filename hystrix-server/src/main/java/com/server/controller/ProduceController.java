@@ -17,7 +17,7 @@ public class ProduceController
 	@Autowired
 	private ProduceService produceService;
 
-	@GetMapping(value = "service")
+	@GetMapping(value = "/service")
 	public String service()
 	{
 		return produceService.service();
