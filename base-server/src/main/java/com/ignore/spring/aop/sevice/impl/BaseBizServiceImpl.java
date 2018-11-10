@@ -1,8 +1,8 @@
 package com.ignore.spring.aop.sevice.impl;
 
+import com.ignore.spring.aop.ClassAnnoation;
+import com.ignore.spring.aop.LogOutput;
 import com.ignore.spring.aop.sevice.BaseBizService;
-import com.spring.aop.ClassAnnoation;
-import com.spring.aop.LogOutput;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Component;

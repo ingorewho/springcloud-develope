@@ -1,6 +1,6 @@
-package com.annotation.self.test;
+package com.ignore.annotation.self.test;
 
-import com.annotation.self.service.SelfDefineService;
+import com.ignore.annotation.self.service.SelfDefineService;
 
 /**
  * @Author: renzhiqiang-lhq

@@ -1,8 +1,7 @@
 package com.ignore.spring.aop.introduction;
 
-import com.spring.aop.sevice.BaseBizService;
-import com.spring.aop.sevice.ExtendService;
-import com.spring.aop.sevice.impl.ExtendServiceImpl;
+import com.ignore.spring.aop.sevice.ExtendService;
+import com.ignore.spring.aop.sevice.impl.ExtendServiceImpl;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.DeclareParents;
 import org.springframework.beans.factory.annotation.Autowired;
