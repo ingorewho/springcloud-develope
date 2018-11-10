@@ -1,3 +1,6 @@
 #####################服务端口配置###################
 zuul-server:7002
 hystrix-server:7003
+mail-server:7004
+sdk-server:7005
+common-server:7006

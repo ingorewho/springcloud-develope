@@ -3,11 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/base-server/base-server.iml" filepath="$PROJECT_DIR$/base-server/base-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-server/common-server.iml" filepath="$PROJECT_DIR$/common-server/common-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-client/eurekaclient.iml" filepath="$PROJECT_DIR$/eureka-client/eurekaclient.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eurekaserver.iml" filepath="$PROJECT_DIR$/eureka-server/eurekaserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/hystrix-server/hystrix-server.iml" filepath="$PROJECT_DIR$/hystrix-server/hystrix-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/kettle-server/kettle-server.iml" filepath="$PROJECT_DIR$/kettle-server/kettle-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mail-server/mail-server.iml" filepath="$PROJECT_DIR$/mail-server/mail-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sdk-server/sdk-server.iml" filepath="$PROJECT_DIR$/sdk-server/sdk-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud.iml" filepath="$PROJECT_DIR$/springcloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/zuul-server/zuul-server.iml" filepath="$PROJECT_DIR$/zuul-server/zuul-server.iml" />
     </modules>

@@ -177,12 +177,13 @@
     <modules>
         <module>eureka-server</module>
         <module>eureka-client</module>
-        <module>kettle-server</module>
         <module>zuul-server</module>
         <module>base-server</module>
         <module>config-server</module>
         <module>hystrix-server</module>
-        <module>base-sdk</module>
+        <module>sdk-server</module>
+        <module>mail-server</module>
+        <module>common-server</module>
     </modules>
 
 

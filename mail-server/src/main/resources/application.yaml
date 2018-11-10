@@ -1,0 +1,10 @@
+server:
+  port: 7004
+spring:
+  application:
+    name: mail-server
+
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:7000/eureka/

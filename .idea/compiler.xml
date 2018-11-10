@@ -7,22 +7,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="base-sdk" />
         <module name="base-server" />
+        <module name="common-server" />
         <module name="config-server" />
         <module name="eurekaclient" />
         <module name="eurekaserver" />
         <module name="hystrix-server" />
-        <module name="kettle-server" />
+        <module name="mail-server" />
+        <module name="sdk-server" />
         <module name="zuul-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="base-sdk" target="1.8" />
       <module name="base-server" target="1.8" />
+      <module name="common-server" target="1.8" />
       <module name="config-server" target="1.8" />
       <module name="eurekaclient" target="1.8" />
       <module name="eurekaserver" target="1.8" />
       <module name="hystrix-server" target="1.8" />
       <module name="kettle-server" target="1.8" />
+      <module name="mail-server" target="1.8" />
+      <module name="sdk-server" target="1.8" />
       <module name="springcloud" target="1.8" />
       <module name="zuul-server" target="1.8" />
     </bytecodeTargetLevel>

@@ -10,7 +10,7 @@ spring:
           uri: https://github.com/ingorewho/springcloud-develope/
           search-paths: config
           username: 17761256463
-          password: slxrzq606729
+          password: *****
 
 eureka:
   client:

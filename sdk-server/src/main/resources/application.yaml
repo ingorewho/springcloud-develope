@@ -1,0 +1,9 @@
+application:
+  name: sdk-server
+server:
+  port: 7005
+
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:7000/eureka/
