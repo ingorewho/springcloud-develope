@@ -1,6 +1,6 @@
 package com.ignore.mail.send.controller;
 
-import com.ignore.utils.aop.aspect.log.db.DbOutputLog;
+import com.ignore.utils.aop.aspect.log.DbOutputLog;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SendMailController {
 
     @PostMapping("/send/simple")
-    @DbOutputLog(desc = "发生简单邮件")
+    @DbOutputLog(desc = "发生简单邮件", dbLog = true)
     public String sendSimpleMail(@RequestBody String data){
         return "发生简单邮件成功!";
     }

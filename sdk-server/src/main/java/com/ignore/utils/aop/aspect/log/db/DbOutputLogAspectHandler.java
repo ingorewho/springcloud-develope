@@ -1,18 +1,14 @@
 package com.ignore.utils.aop.aspect.log.db;
 
-import com.ignore.client.CommonServerClient;
 import com.ignore.dto.common.dblog.DbLogDTO;
 import com.ignore.utils.aop.aspect.log.db.async.WriteDbLogServiceAsync;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
-import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 
@@ -26,12 +22,13 @@ import org.springframework.context.annotation.ComponentScan;
 @Aspect
 @ComponentScan
 public class DbOutputLogAspectHandler {
-
+    private Logger logger = LogManager.getLogger();
     @Autowired
     private WriteDbLogServiceAsync writeDbLogServiceAsync;
 
-    @AfterReturning(returning = "response", pointcut = "@annotation(dbOutputLog)")
-    public void dbLog(JoinPoint point, Object response, DbOutputLog dbOutputLog){
+    @AfterReturning(returning = "response", pointcut = "@annotation(com.ignore.utils.aop.aspect.log.DbOutputLog)")
+    public void dbLog(JoinPoint point, Object response){
+        logger.info("进入!");
         //获取方法实例
         Signature signature = point.getSignature();
         //获取调用方法全名称:包名.类名.方法名
@@ -43,7 +40,7 @@ public class DbOutputLogAspectHandler {
         //参数
         Object[] args = point.getArgs();
         //返回值:response
-        if (dbOutputLog.dbLog()){
+        if (true){
             DbLogDTO dbLogDTO = new DbLogDTO();
             dbLogDTO.setArgs(StringUtils.join(args, ","));
             dbLogDTO.setCaller(caller);

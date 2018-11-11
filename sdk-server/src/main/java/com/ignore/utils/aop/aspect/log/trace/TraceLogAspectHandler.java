@@ -1,5 +1,6 @@
 package com.ignore.utils.aop.aspect.log.trace;
 
+import com.ignore.utils.aop.aspect.log.db.async.WriteDbLogServiceAsync;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -7,6 +8,7 @@ import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Modifier;
@@ -22,6 +24,9 @@ import java.lang.reflect.Modifier;
 @Component
 public class TraceLogAspectHandler {
     private Logger logger = LogManager.getLogger();
+
+    @Autowired
+    private WriteDbLogServiceAsync writeDbLogServiceAsync;
 
     @Pointcut("execution(* com.ignore.*..*.*(..))")
     public void logPoint(){

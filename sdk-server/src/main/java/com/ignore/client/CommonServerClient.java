@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
  * Copyright: Copyright (c) 2018
  * Version: 0.0.1
  */
-@FeignClient(value = ServerConfigConst.COMMON_SERVER)
+@FeignClient(ServerConfigConst.COMMON_SERVER)
 public interface CommonServerClient {
 
     @PostMapping("/common/dblog/write")

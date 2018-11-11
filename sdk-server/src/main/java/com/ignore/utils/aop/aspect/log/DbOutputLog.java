@@ -1,4 +1,4 @@
-package com.ignore.utils.aop.aspect.log.db;
+package com.ignore.utils.aop.aspect.log;
 
 import java.lang.annotation.*;
 
