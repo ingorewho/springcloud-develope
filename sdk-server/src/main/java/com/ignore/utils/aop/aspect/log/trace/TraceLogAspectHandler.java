@@ -25,9 +25,6 @@ import java.lang.reflect.Modifier;
 public class TraceLogAspectHandler {
     private Logger logger = LogManager.getLogger();
 
-    @Autowired
-    private WriteDbLogServiceAsync writeDbLogServiceAsync;
-
     @Pointcut("execution(* com.ignore.*..*.*(..))")
     public void logPoint(){
 
