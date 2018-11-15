@@ -15,4 +15,5 @@ public class DbLogDTO {
     private String args;
     private String response;
     private String bizId;
+    private long cost;
 }

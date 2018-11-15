@@ -20,7 +20,7 @@ import java.lang.reflect.Modifier;
  */
 @Aspect
 @Component
-public class TraceLogAspectHandler {
+public class TraceLogAspect {
     private Logger logger = LogManager.getLogger();
 
     @Pointcut("execution(* com.ignore.*..*.*(..))")

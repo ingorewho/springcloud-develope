@@ -6,10 +6,8 @@ import com.ignore.utils.aop.aspect.log.db.async.WriteDbLogServiceAsync;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
-import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +25,7 @@ import java.util.Map;
  */
 @Aspect
 @ComponentScan
-public class DbOutputLogAspectHandler {
+public class DbLogAspect {
     private Logger logger = LogManager.getLogger();
     @Autowired
     private WriteDbLogServiceAsync writeDbLogServiceAsync;

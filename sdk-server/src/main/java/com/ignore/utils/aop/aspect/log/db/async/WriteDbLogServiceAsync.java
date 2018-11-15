@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.ExecutorService;
+
 /**
  * Description： TODO
  * Author: ignore1992
@@ -16,11 +18,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class WriteDbLogServiceAsync {
 
-    @Autowired
+    @Autowired(required = false)
     private CommonServerClient commonServerClient;
+    @Autowired
+    private ExecutorService executor;
 
-    @Async
     public void writeDbLog(DbLogDTO dbLogDTO){
-        commonServerClient.writeDbLog(dbLogDTO);
+        executor.execute(()->commonServerClient.writeDbLog(dbLogDTO));
     }
 }
