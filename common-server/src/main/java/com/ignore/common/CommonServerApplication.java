@@ -15,7 +15,6 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients
 public class CommonServerApplication {
     public static void main(String[] args) {
         SpringApplication.run(CommonServerApplication.class , args);

@@ -1,4 +1,4 @@
-package com.ignore.mail.send.service;
+package com.ignore.mail.send.service.impl;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -8,17 +8,15 @@ import org.springframework.stereotype.Service;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Author: renzhiqiang-lhq
- * @Description:
- * @Date: Created In 17:14 2018/11/16
+ * Description： TODO
+ * Author: ignore1992
+ * Date: Created in 2018/11/16 20:25
+ * Copyright: Copyright (c) 2018
+ * Version: 0.0.1
  */
 @Service
-public class SendMailServiceImpl implements SendMailService{
+public class SendTestService {
     private Logger logger = LogManager.getLogger();
-    @Override
-    public void sendMail(String content) {
-        test();
-    }
 
     @Async
     protected void test(){

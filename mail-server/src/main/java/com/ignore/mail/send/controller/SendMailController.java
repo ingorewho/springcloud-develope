@@ -1,6 +1,6 @@
 package com.ignore.mail.send.controller;
 
-import com.ignore.mail.send.service.SendMailServiceImpl;
+import com.ignore.mail.send.service.impl.SendMailServiceImpl;
 import com.ignore.utils.aop.aspect.log.DbOutputLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,9 +18,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/mail")
 @RestController
 public class SendMailController {
-
     @Autowired
     private SendMailServiceImpl sendMailServiceImpl;
+
+
     @PostMapping("/send/simple")
     @DbOutputLog(desc = "发生简单邮件", dbLog = true)
     public String sendSimpleMail(@RequestBody String data) {

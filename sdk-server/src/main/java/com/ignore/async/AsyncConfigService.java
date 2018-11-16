@@ -19,7 +19,6 @@ import java.util.concurrent.Executor;
  */
 @Configuration
 @EnableAutoConfiguration
-@EnableAsync
 public class AsyncConfigService extends AsyncConfigurerSupport {
     @Value("${thread.pool.corePoolSize:5}")
     private int corePoolSize;

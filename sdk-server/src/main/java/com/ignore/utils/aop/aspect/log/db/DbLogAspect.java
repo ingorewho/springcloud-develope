@@ -11,7 +11,7 @@ import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,7 +24,7 @@ import java.util.Map;
  * Version: 0.0.1
  */
 @Aspect
-@ComponentScan
+@Component
 public class DbLogAspect {
     private Logger logger = LogManager.getLogger();
     @Autowired
@@ -32,6 +32,7 @@ public class DbLogAspect {
 
     @Around("@annotation(dbOutputLog)")
     public Object dbLog(ProceedingJoinPoint point , DbOutputLog dbOutputLog) throws Throwable {
+        logger.info("进入!");
         //获取方法实例
         Signature signature = point.getSignature();
         //获取调用方法全名称:包名.类名.方法名
@@ -60,7 +61,7 @@ public class DbLogAspect {
                 DbLogDTO dbLogDTO = new DbLogDTO();
                 dbLogDTO.setArgs(StringUtils.join(args , ","));
                 dbLogDTO.setCaller(caller);
-                dbLogDTO.setResponse(response.toString());
+                dbLogDTO.setResponse(response != null ? response.toString() : "");
                 dbLogDTO.setCost(cost);
                 writeDbLogServiceAsync.writeDbLog(dbLogDTO);
             }

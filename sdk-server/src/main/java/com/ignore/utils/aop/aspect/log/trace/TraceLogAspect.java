@@ -28,7 +28,7 @@ public class TraceLogAspect {
 
     }
 
-    @Around("logPoint()")
+//    @Around("logPoint()")
     public void trace(ProceedingJoinPoint point) {
         //获取方法实例
         Signature signature = point.getSignature();

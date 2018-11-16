@@ -17,8 +17,8 @@ import org.springframework.scheduling.annotation.EnableAsync;
  */
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients("com.ignore")
 @ComponentScan("com.ignore")
+@EnableFeignClients("com.ignore")
 @EnableAsync
 public class MailServerApplication {
     public static void main(String[] args) {
