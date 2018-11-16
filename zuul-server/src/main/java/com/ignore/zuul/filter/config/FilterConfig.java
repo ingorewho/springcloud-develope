@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 public class FilterConfig {
 
     @Bean
-    public CommonFilter commonFilter(){
+    public CommonFilter commonFilter() {
         return new CommonFilter();
     }
 }

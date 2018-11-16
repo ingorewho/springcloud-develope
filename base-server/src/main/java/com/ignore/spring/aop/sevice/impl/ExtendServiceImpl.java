@@ -4,7 +4,7 @@ import com.ignore.spring.aop.sevice.ExtendService;
 import org.springframework.stereotype.Component;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 14:37 2018/9/26
  * @Modified By:

@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.scheduling.annotation.EnableAsync;
+
 
 /**
  * Description： 邮件服务入口
@@ -15,10 +17,11 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication
 @EnableEurekaClient
+@EnableFeignClients("com.ignore")
 @ComponentScan("com.ignore")
-@EnableFeignClients
+@EnableAsync
 public class MailServerApplication {
-    public static void main(String[] args){
-        SpringApplication.run(MailServerApplication.class, args);
+    public static void main(String[] args) {
+        SpringApplication.run(MailServerApplication.class , args);
     }
 }

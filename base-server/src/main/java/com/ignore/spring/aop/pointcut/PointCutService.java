@@ -3,9 +3,8 @@ package com.ignore.spring.aop.pointcut;
 import org.aspectj.lang.annotation.Pointcut;
 
 /**
- * @Author: renzhiqiang-lhq
- * @Description:
- * 1.切入点（pointcut）
+ * @Author: ignore1992
+ * @Description: 1.切入点（pointcut）
  * 对连接点进行拦截的定义
  * 2.连接点（joinpoint）
  * 被拦截到的点，因为Spring只支持方法类型的连接点，所以在Spring中连接点指的就是被拦截到的方法，实际上连接点还可以是字段或者构造器

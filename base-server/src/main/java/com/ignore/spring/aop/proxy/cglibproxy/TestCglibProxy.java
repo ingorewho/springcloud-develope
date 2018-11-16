@@ -3,10 +3,8 @@ package com.ignore.spring.aop.proxy.cglibproxy;
 import org.mockito.cglib.proxy.Enhancer;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
-
- *
  * @Date: Created In 11:29 2018/9/27
  */
 public class TestCglibProxy {

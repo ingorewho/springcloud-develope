@@ -3,7 +3,7 @@ package com.ignore.spring.aop;
 import java.lang.annotation.*;
 
 /**
- * @Author: rzq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 17:31 2018/8/15
  * @Modified By:
@@ -11,7 +11,6 @@ import java.lang.annotation.*;
 @Documented
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface LogOutput
-{
-	String value() default "";
+public @interface LogOutput {
+    String value() default "";
 }

@@ -19,7 +19,7 @@ import javax.xml.namespace.QName;
 import java.net.URL;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description: 通过axis方式调用webservice接口
  * @Date: Created In 14:13 2018/10/10
  */
@@ -29,36 +29,36 @@ public class AxisCallWebServiceImpl extends AbstractCallWebService {
 
     @Override
     public BaseResponseDTO doCall(BaseReqDTO reqDTO) {
-        try{
-            AxisReqDTO axisReqDTO = (AxisReqDTO)reqDTO;
+        try {
+            AxisReqDTO axisReqDTO = (AxisReqDTO) reqDTO;
             Service service = new Service();
-            Call call = (Call)service.createCall();
+            Call call = (Call) service.createCall();
             call.setTargetEndpointAddress(new URL(axisReqDTO.getUrl()));
             call.setSOAPActionURI("");
-            call.setPortName(new QName(axisReqDTO.getNameSpace(), axisReqDTO.getPortName()));
-            call.setPortTypeName(new QName(axisReqDTO.getNameSpace(), axisReqDTO.getPortTypeName()));
-            call.setProperty(Call.OPERATION_STYLE_PROPERTY, Style.DOCUMENT.getName());
+            call.setPortName(new QName(axisReqDTO.getNameSpace() , axisReqDTO.getPortName()));
+            call.setPortTypeName(new QName(axisReqDTO.getNameSpace() , axisReqDTO.getPortTypeName()));
+            call.setProperty(Call.OPERATION_STYLE_PROPERTY , Style.DOCUMENT.getName());
             call.setOperation(axisReqDTO.getOperationName());
             call.addHeader(new SOAPHeaderElement(axisReqDTO.getHeader()));
 
             Object result = call.invoke(new Object[]{new SOAPBodyElement(axisReqDTO.getBody())});
             return transferResponse(result);
-        }catch (Exception e){
-            logger.error("通过axis方式调用webservice接口异常", e);
+        } catch (Exception e) {
+            logger.error("通过axis方式调用webservice接口异常" , e);
         }
         return null;
     }
 
     @Override
     protected BaseResponseDTO transferResponse(Object result) {
-        try{
+        try {
             String respsBody = result.toString();
-            Document bodyDoc = DocumentHelper.parseText(respsBody.substring(1, respsBody.length()-1));
+            Document bodyDoc = DocumentHelper.parseText(respsBody.substring(1 , respsBody.length() - 1));
             AxisRepsDTO repsDTO = new AxisRepsDTO();
             repsDTO.setResult(bodyDoc);
             return repsDTO;
-        }catch (Exception e){
-            logger.error("axis请求结果解析异常", e);
+        } catch (Exception e) {
+            logger.error("axis请求结果解析异常" , e);
         }
         return null;
     }

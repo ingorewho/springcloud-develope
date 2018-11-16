@@ -1,19 +1,18 @@
 package com.spring.aop.proxy.jdkproxy;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 10:48 2018/9/27
  * @Modified By:
  */
-public class JDKServiceImpl  implements  JDKProxyService{
+public class JDKServiceImpl implements JDKProxyService {
     @Override
     public void jdkMethod() {
         System.out.println("jdk..");
     }
 
-    private void jdkPrivate()
-    {
+    private void jdkPrivate() {
         System.out.println("jdk private..");
     }
 }

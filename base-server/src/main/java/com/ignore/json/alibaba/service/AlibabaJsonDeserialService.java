@@ -12,17 +12,15 @@ import java.lang.reflect.Type;
 import java.nio.charset.Charset;
 
 /**
- * @Author: renzhiqiang-lhq
- * @Description:
- *  综述:反序列化
+ * @Author: ignore1992
+ * @Description: 综述:反序列化
  * 1.JSONObject继承于JSON抽象类，所以在用父类方法时，尽量调用父类
  * 2.JSON主要用于json序列化和反序列化
  * 3.JSONArray，JSONObject
  * @Date: Created In 11:41 2018/9/14
  * @Modified By:
  */
-public class AlibabaJsonDeserialService
-{
+public class AlibabaJsonDeserialService {
     /**
      * JSON类反序列化入口:parse、parseObject、parserArray
      * 1.这些方法的实现，实际托付给了DefaultJSONParser类
@@ -47,23 +45,22 @@ public class AlibabaJsonDeserialService
      * 反序列化操作：parse()
      * 将String或者byte[] 数组parse为Object，这个Object可以被JSONObject或JSONArray接收。
      */
-    public static void jsonParse()
-    {
+    public static void jsonParse() {
         String json = "{\"request:\":\"hello\",\"result\":\"haha\"}";
         System.out.println(json.length());
         Object object = JSON.parse(json);
         System.out.println(object);
         //Java在java.math包中提供的API类BigDecimal，用来对超过16位有效位的数进行精确的运算。双精度浮点型变量double可以处理16位有效数。在实际应用中，需要对更大或者更小的数进行运算和处理。float和double只能用来做科学计算或者是工程计算，在商业计算中要用java.math.BigDecimal
         //默认使用的是DEFAULT_PARSER_FEATURE，包括了Feature的七种枚举类型
-        object = JSON.parse(json, Feature.UseBigDecimal);
+        object = JSON.parse(json , Feature.UseBigDecimal);
         System.out.println(object);
         //将json串字节数组转为JSONObject或JSONArray可以接收的Object
-        JSON.parse(json.getBytes(), Feature.UseBigDecimal);
+        JSON.parse(json.getBytes() , Feature.UseBigDecimal);
         System.out.println(object);
         //ParserConfig是反序列化配置,其中的boolean asmEnable同样判断是否为Andriod环境
-        System.out.println(JSON.parse(json, ParserConfig.getGlobalInstance()));
+        System.out.println(JSON.parse(json , ParserConfig.getGlobalInstance()));
         //解析指定数组长度(解析时不包含len的最后一位)、使用指定编码、指定特征
-        System.out.println(JSON.parse(json.getBytes(), 0, 36, Charset.forName("utf-8").newDecoder(), Feature.UseBigDecimal));
+        System.out.println(JSON.parse(json.getBytes() , 0 , 36 , Charset.forName("utf-8").newDecoder() , Feature.UseBigDecimal));
     }
 
 
@@ -71,30 +68,29 @@ public class AlibabaJsonDeserialService
      * 反序列化操作：parseObject()
      * 这系列方法可以把String或者byte[] parse为自己定义的实体类，也可以是其他jar包的数据类型，只要在后面指明它的类型就好了
      */
-    public static void jsonParseObject()
-    {
+    public static void jsonParseObject() {
         String json = "{\"request:\":\"hello\",\"result\":\"haha\"}";
         //1.默认解析成JSONObject类型
         JSONObject object = JSON.parseObject(json);
         System.out.println(object);
         //2.指定具体泛型类型(必须是pulic修饰的类,可以不实现序列号接口)
-        Person person =JSON.parseObject(json, Person.class);
+        Person person = JSON.parseObject(json , Person.class);
         System.out.println(person);
         //3.Type体系中类型的包括：原始类型(Class)、参数化类型(ParameterizedTypes)、数组类型(GenericArrayType)、类型变量(TypeVariable)、基本类型
-        System.out.println(JSON.parseObject(json, new TypeReference<Person<String>>(){},Feature.UseBigDecimal));
+        System.out.println(JSON.parseObject(json , new TypeReference<Person<String>>() {
+        } , Feature.UseBigDecimal));
         //4.指定Type类型和特征，如果是泛型类型，最好用方式3
-        System.out.println(JSON.parseObject(json, Person.class, Feature.UseBigDecimal));
+        System.out.println(JSON.parseObject(json , Person.class , Feature.UseBigDecimal));
     }
 
-    public static void jsonParseArray()
-    {
+    public static void jsonParseArray() {
         String jsonArray = "[{\"request\":\"hello\",\"result\":\"haha\"},{\"request\":\"hello1\",\"result\":\"haha1\"}]";
         //指定类型解析得到Person对象数组(必须是pulic修饰的类,可以不实现序列号接口)
-        System.out.println(JSON.parseArray(jsonArray, Person.class));
+        System.out.println(JSON.parseArray(jsonArray , Person.class));
         //不指定类型，则默认转为JSONArray类型数组
         System.out.println(JSON.parseArray(jsonArray));
         //指定类型数组
-        System.out.println(JSON.parseArray(jsonArray, new Type[]{Person.class, Animal.class}));
+        System.out.println(JSON.parseArray(jsonArray , new Type[]{Person.class , Animal.class}));
     }
 
 }

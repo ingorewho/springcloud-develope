@@ -6,30 +6,25 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.concurrent.ListenableFuture;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 15:11 2018/8/20
  * @Modified By:
  */
 @Service
 @EnableAsync
-public class CallAsyncService
-{
-	@Autowired
-	private AsyncService asyncService;
+public class CallAsyncService {
+    @Autowired
+    private AsyncService asyncService;
 
-	public String callAsyncMethod()
-	{
-		try
-		{
-			asyncService.asyncMehtodWithNoRet("hello");
-			ListenableFuture<String> result =  asyncService.asyncMethod("hello");
-			return result.get();
-		}
-		catch (Exception e)
-		{
-			e.printStackTrace();
-		}
-		return null;
-	}
+    public String callAsyncMethod() {
+        try {
+            asyncService.asyncMehtodWithNoRet("hello");
+            ListenableFuture<String> result = asyncService.asyncMethod("hello");
+            return result.get();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

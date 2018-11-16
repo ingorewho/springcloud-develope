@@ -5,21 +5,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 16:43 2018/9/3
  * @Modified By:
  */
 @RestController
 @RequestMapping(value = "/producer")
-public class ProduceController
-{
-	@Autowired
-	private ProduceService produceService;
+public class ProduceController {
+    @Autowired
+    private ProduceService produceService;
 
-	@GetMapping(value = "/service")
-	public String service()
-	{
-		return produceService.service();
-	}
+    @GetMapping(value = "/service")
+    public String service() {
+        return produceService.service();
+    }
 }

@@ -1,7 +1,7 @@
 package com.ignore.json.alibaba;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 16:39 2018/9/27
  */

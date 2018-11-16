@@ -8,24 +8,21 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @Author: rzq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 20:44 2018/8/9
  * @Modified By:
  */
 @EnableEurekaClient
 @SpringBootApplication
-public class EurekaClientApplication
-{
-	@Bean
-	@LoadBalanced
-	RestTemplate restTemplate()
-	{
-		return new RestTemplate();
-	}
+public class EurekaClientApplication {
+    @Bean
+    @LoadBalanced
+    RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
 
-	public static void main(String[] args)
-	{
-		SpringApplication.run(EurekaClientApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(EurekaClientApplication.class , args);
+    }
 }

@@ -1,13 +1,12 @@
 package com.ignore.annotation.spring.service;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 17:56 2018/9/17
  * @Modified By:
  */
-public class MvcAnnoationService
-{
+public class MvcAnnoationService {
     /**
      * @Service用于标注业务层组件
      * @Controller用于标注控制层组件（如struts中的action）

@@ -1,9 +1,8 @@
 package com.ignore.spring.aop.proxy;
 
 /**
- * @Author: renzhiqiang-lhq
- * @Description:
- * 1.织入(Weaving)
+ * @Author: ignore1992
+ * @Description: 1.织入(Weaving)
  * 把切面应用到目标对象来创建新的代理对象的过程
  * 织入一般发生在如下几个时机:
  * <p>
@@ -15,7 +14,7 @@ package com.ignore.spring.aop.proxy;
  * 应用通知的对象
  * 3.目标(Target)
  * 被通知的对象
- *
+ * <p>
  * 如果不同切面需要在同一个连接点进行处理:
  * 1.可以让切面实现org.springframework.core.Ordered接口
  * 2.使用@Order注解指定优先级

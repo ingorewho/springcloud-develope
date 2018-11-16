@@ -10,9 +10,8 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Modifier;
 
 /**
- * @Author: rzq
- * @Description:
- * 1.切面（aspect）
+ * @Author: ignore1992
+ * @Description: 1.切面（aspect）
  * 类是对物体特征的抽象，切面就是对横切关注点的抽象
  * 2.通知（advice）
  * 通知指的就是指拦截到连接点之后要执行的代码，通知分为前置、后置、异常、最终、环绕通知五类

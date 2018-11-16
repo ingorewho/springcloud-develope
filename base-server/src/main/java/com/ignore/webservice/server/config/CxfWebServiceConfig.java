@@ -13,30 +13,30 @@ import org.springframework.context.annotation.Configuration;
 import javax.xml.ws.Endpoint;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 11:41 2018/10/10
  */
 @Configuration
 public class CxfWebServiceConfig {
     @Bean
-    public ServletRegistrationBean dispatcherServlet(){
-        return new ServletRegistrationBean(new CXFServlet(), "/webservice/*");
+    public ServletRegistrationBean dispatcherServlet() {
+        return new ServletRegistrationBean(new CXFServlet() , "/webservice/*");
     }
 
     @Bean(name = Bus.DEFAULT_BUS_ID)
-    public SpringBus springBus(){
+    public SpringBus springBus() {
         return new SpringBus();
     }
 
     @Bean
-    public WebServiceServer webServiceServer(){
+    public WebServiceServer webServiceServer() {
         return new WebServiceImpl();
     }
 
     @Bean
-    public Endpoint endpoint(){
-        EndpointImpl endpoint = new EndpointImpl(springBus(), webServiceServer());
+    public Endpoint endpoint() {
+        EndpointImpl endpoint = new EndpointImpl(springBus() , webServiceServer());
         endpoint.publish("/api");
         return endpoint;
     }

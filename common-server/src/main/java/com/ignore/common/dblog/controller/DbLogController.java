@@ -23,7 +23,7 @@ public class DbLogController {
     private DbLogServiceImpl dbLogServiceImpl;
 
     @PostMapping("/common/dblog/write")
-    public void write(@RequestBody DbLogDTO dbLogDTO){
+    public void write(@RequestBody DbLogDTO dbLogDTO) {
         DbLogEntity entity = new DbLogEntity();
         entity.setBizId(dbLogDTO.getBizId());
         dbLogServiceImpl.writeLog(entity);

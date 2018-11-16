@@ -5,15 +5,13 @@ import com.alibaba.fastjson.serializer.*;
 import com.ignore.json.alibaba.entity.Person;
 
 /**
- * @Author: renzhiqiang-lhq
- * @Description:
- * 综述:使用alibaba进行序列化操作
- *  JSON是一个抽象类，该类实现了JSONAware（转为json串）和JSONStreamAware（将json串写入Appendable中）的接口，同时又是JSONArray（内部实现就是个List）和JSONObject（内部实现就是个Map）的父类
+ * @Author: ignore1992
+ * @Description: 综述:使用alibaba进行序列化操作
+ * JSON是一个抽象类，该类实现了JSONAware（转为json串）和JSONStreamAware（将json串写入Appendable中）的接口，同时又是JSONArray（内部实现就是个List）和JSONObject（内部实现就是个Map）的父类
  * @Date: Created In 19:45 2018/9/18
  * @Modified By:
  */
-public class AlibabaJsonSerialService
-{
+public class AlibabaJsonSerialService {
     /**
      * JSON类反序列化入口:JSON.toJSONString()
      * 1.这些方法的实现，实际托付给了JSONSerializer类
@@ -50,78 +48,66 @@ public class AlibabaJsonSerialService
     /**
      * 序列化操作：toJson()
      */
-    public static void toJson()
-    {
-        Person<String> aPerson = new Person<>("hello", "world");
+    public static void toJson() {
+        Person<String> aPerson = new Person<>("hello" , "world");
         //转成JSON类型的对象
         System.out.println(JSON.toJSON(aPerson));
         //指定序列化配置
-        System.out.println(JSON.toJSON(aPerson, SerializeConfig.globalInstance));
+        System.out.println(JSON.toJSON(aPerson , SerializeConfig.globalInstance));
         //将JSON类型的对象序列化为Java对象
         String json = "{\"request\":\"hello\",\"result\":\"haha\"}";
-        System.out.println(JSON.toJavaObject(JSON.parseObject(json), Person.class));
+        System.out.println(JSON.toJavaObject(JSON.parseObject(json) , Person.class));
     }
 
     /**
      * 序列化操作:toJSONBytes()
      */
-    public static void toJSONBytes()
-    {
-        Person<String> aPerson = new Person<>("hello", "world");
+    public static void toJSONBytes() {
+        Person<String> aPerson = new Person<>("hello" , "world");
         //指定序列化特征，序列化为字节数组
-        System.out.println(JSON.toJSONBytes(aPerson, SerializerFeature.NotWriteDefaultValue));
+        System.out.println(JSON.toJSONBytes(aPerson , SerializerFeature.NotWriteDefaultValue));
     }
 
     /**
      * 序列化操作:toJSONString()
      */
-    public static void toJSONString()
-    {
-        Person<String> aPerson = new Person<>("hello", "world");
+    public static void toJSONString() {
+        Person<String> aPerson = new Person<>("hello" , "world");
         //使用before过滤器，在序列化前进行操作，after过滤器也类似，只是在序列化后进行操作
-        SerializeFilter filter = new BeforeFilter()
-        {
+        SerializeFilter filter = new BeforeFilter() {
             @Override
-            public void writeBefore(Object o)
-            {
-                writeKeyValue("test","hello");
+            public void writeBefore(Object o) {
+                writeKeyValue("test" , "hello");
             }
         };
         System.out.println("BeforeFilter：" + JSON.toJSONString(aPerson , filter));
         //使用NameFilter，在序列化时改key，ValueFilter也类似，在序列化时改value
-        SerializeFilter nameFilter = new NameFilter()
-        {
+        SerializeFilter nameFilter = new NameFilter() {
             @Override
-            public String process(Object o , String key , Object value)
-            {
-                if(key.equals("request"))
-                {
+            public String process(Object o , String key , Object value) {
+                if (key.equals("request")) {
                     return "REQUEST";
                 }
                 return key;
             }
         };
-        System.out.println("NameFilter：" + JSON.toJSONString(aPerson, nameFilter));
+        System.out.println("NameFilter：" + JSON.toJSONString(aPerson , nameFilter));
         //使用SimplePropertyPreFilter,只序列化一部分字段，将序列化的字段配置到数组中
         SerializeFilter propertyPreFilter = new SimplePropertyPreFilter(new String[]{"request"});
-        System.out.println("SimplePropertyPreFilter： " + JSON.toJSONString(aPerson, propertyPreFilter));
+        System.out.println("SimplePropertyPreFilter： " + JSON.toJSONString(aPerson , propertyPreFilter));
         //使用PropertyFilter,根据key和value判断是否需要序列化
-        SerializeFilter propertyFilter = new PropertyFilter()
-        {
+        SerializeFilter propertyFilter = new PropertyFilter() {
             @Override
-            public boolean apply(Object o , String key , Object value)
-            {
-                if(key.equals("request"))
-                {
+            public boolean apply(Object o , String key , Object value) {
+                if (key.equals("request")) {
                     return true;
                 }
-                else
-                {
+                else {
                     return false;
                 }
             }
         };
-        System.out.println("PropertyFilter：" + JSON.toJSONString(aPerson, propertyFilter));
+        System.out.println("PropertyFilter：" + JSON.toJSONString(aPerson , propertyFilter));
     }
 
 

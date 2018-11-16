@@ -18,7 +18,7 @@ import org.springframework.web.context.WebApplicationContext;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 18:51 2018/10/10
  */
@@ -38,16 +38,15 @@ public class TestAxisController {
 
 
     @Test
-    public void test(){
-        try{
+    public void test() {
+        try {
             AxisReqDTO reqDTO = new AxisReqDTO();
             reqDTO.setNameSpace("");
-            RequestBuilder request = post("/call/axis").param("data", null).accept(MediaType.APPLICATION_JSON_UTF8);
+            RequestBuilder request = post("/call/axis").param("data" , null).accept(MediaType.APPLICATION_JSON_UTF8);
             String res = mock.perform(request).andReturn().getResponse().getContentAsString();
-            logger.info("请求axis接口，返回结果:{}", res);
-        }catch (Exception e)
-        {
-            logger.error("异常", e);
+            logger.info("请求axis接口，返回结果:{}" , res);
+        } catch (Exception e) {
+            logger.error("异常" , e);
         }
     }
 }

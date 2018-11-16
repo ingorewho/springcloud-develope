@@ -5,7 +5,7 @@ import org.mockito.cglib.proxy.Enhancer;
 import java.lang.annotation.Target;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description: 生成代理对象过程:
  * 1、生成代理类Class的二进制字节码；
  * 2、通过Class.forName加载二进制字节码，生成Class对象；

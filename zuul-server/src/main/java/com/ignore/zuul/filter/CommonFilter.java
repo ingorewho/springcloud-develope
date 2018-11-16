@@ -15,8 +15,9 @@ import javax.servlet.http.HttpServletRequest;
  * Copyright: Copyright (c) 2018
  * Version: 0.0.1
  */
-public class CommonFilter  extends ZuulFilter{
+public class CommonFilter extends ZuulFilter {
     private Logger logger = LogManager.getLogger();
+
     @Override
     public String filterType() {
         //pre表示在路由之前进行过滤
@@ -40,9 +41,9 @@ public class CommonFilter  extends ZuulFilter{
     public Object run() {
         RequestContext requestContext = RequestContext.getCurrentContext();
         HttpServletRequest request = requestContext.getRequest();
-        logger.info("当前请求url:{}", request.getRequestURI());
+        logger.info("当前请求url:{}" , request.getRequestURI());
         String accessToken = request.getParameter("token");
-        if (StringUtils.isBlank(accessToken)){
+        if (StringUtils.isBlank(accessToken)) {
             logger.warn("token为空!");
             requestContext.setSendZuulResponse(false);
             requestContext.setResponseStatusCode(401);

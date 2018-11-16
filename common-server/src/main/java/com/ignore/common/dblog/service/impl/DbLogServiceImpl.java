@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
  * Version: 0.0.1
  */
 @Service
-public class DbLogServiceImpl implements DbLogService{
+public class DbLogServiceImpl implements DbLogService {
     private Logger logger = LogManager.getLogger();
 
     @Override

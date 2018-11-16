@@ -4,12 +4,12 @@ import lombok.Data;
 import org.w3c.dom.Element;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 15:49 2018/10/10
  */
 @Data
-public class AxisReqDTO extends BaseReqDTO{
+public class AxisReqDTO extends BaseReqDTO {
     private String url;
     private String nameSpace;
     private String portName;

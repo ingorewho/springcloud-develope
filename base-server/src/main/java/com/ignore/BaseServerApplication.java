@@ -6,7 +6,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.scheduling.annotation.EnableAsync;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 11:49 2018/10/10
  */
@@ -14,8 +14,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @EnableEurekaClient
 @EnableAsync
 public class BaseServerApplication {
-    public static void main(String[] args)
-    {
-        SpringApplication.run(BaseServerApplication.class, args);
+    public static void main(String[] args) {
+        SpringApplication.run(BaseServerApplication.class , args);
     }
 }

@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 14:48 2018/9/26
  * @Modified By:
@@ -21,9 +21,8 @@ public class IntroductionTest {
     private BaseBizService baseBizService;
 
     @Test
-    public void test()
-    {
-        ExtendService extendService =(ExtendService) baseBizService;
+    public void test() {
+        ExtendService extendService = (ExtendService) baseBizService;
         extendService.extend();
     }
 }

@@ -5,7 +5,7 @@ import com.ignore.webservice.dto.request.BaseReqDTO;
 import com.ignore.webservice.dto.response.BaseResponseDTO;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 16:18 2018/10/10
  */
@@ -15,10 +15,11 @@ public abstract class BaseClientController {
 
     /**
      * 模板方法
+     *
      * @param reqDTO
      * @return
      */
-    public BaseResponseDTO call(BaseReqDTO reqDTO){
+    public BaseResponseDTO call(BaseReqDTO reqDTO) {
         return callWebService.doCall(reqDTO);
     }
 
