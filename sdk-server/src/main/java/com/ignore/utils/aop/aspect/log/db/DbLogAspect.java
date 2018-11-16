@@ -31,7 +31,7 @@ public class DbLogAspect {
     private WriteDbLogServiceAsync writeDbLogServiceAsync;
 
     @Around("@annotation(dbOutputLog)")
-    public Object dbLog(ProceedingJoinPoint point, DbOutputLog dbOutputLog)throws Throwable{
+    public Object dbLog(ProceedingJoinPoint point , DbOutputLog dbOutputLog) throws Throwable {
         //获取方法实例
         Signature signature = point.getSignature();
         //获取调用方法全名称:包名.类名.方法名
@@ -53,11 +53,12 @@ public class DbLogAspect {
             return response;
         } catch (Throwable e) {
             cost = System.currentTimeMillis() - start;
-            throw  e;
-        }finally {
-            if (dbOutputLog.dbLog()){
+            throw e;
+        }
+        finally {
+            if (dbOutputLog.dbLog()) {
                 DbLogDTO dbLogDTO = new DbLogDTO();
-                dbLogDTO.setArgs(StringUtils.join(args, ","));
+                dbLogDTO.setArgs(StringUtils.join(args , ","));
                 dbLogDTO.setCaller(caller);
                 dbLogDTO.setResponse(response.toString());
                 dbLogDTO.setCost(cost);

@@ -24,12 +24,12 @@ public class TraceLogAspect {
     private Logger logger = LogManager.getLogger();
 
     @Pointcut("execution(* com.ignore.*..*.*(..))")
-    public void logPoint(){
+    public void logPoint() {
 
     }
 
     @Around("logPoint()")
-    public void trace(ProceedingJoinPoint point){
+    public void trace(ProceedingJoinPoint point) {
         //获取方法实例
         Signature signature = point.getSignature();
         //获取调用方法全名称:包名.类名.方法名
@@ -45,7 +45,7 @@ public class TraceLogAspect {
         long start = System.currentTimeMillis();
         try {
             point.proceed();
-            logger.trace("类名:{},调用方法名:{},参数:{},耗时:{}" , className , methodName , args, System.currentTimeMillis() - start);
+            logger.trace("类名:{},调用方法名:{},参数:{},耗时:{}" , className , methodName , args , System.currentTimeMillis() - start);
         } catch (Throwable throwable) {
             logger.error(throwable);
         }

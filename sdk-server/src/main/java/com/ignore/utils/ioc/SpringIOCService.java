@@ -27,7 +27,7 @@ public class SpringIOCService implements BeanDefinitionRegistryPostProcessor {
 
     @Override
     public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {
-        registerBean(registry, "commonServerClient", CommonServerClient.class);
+        registerBean(registry , "commonServerClient" , CommonServerClient.class);
     }
 
     @Override
@@ -35,18 +35,18 @@ public class SpringIOCService implements BeanDefinitionRegistryPostProcessor {
 
     }
 
-    private void registerBean(BeanDefinitionRegistry registry, String name, Class<?>beanClass){
+    private void registerBean(BeanDefinitionRegistry registry , String name , Class<?> beanClass) {
 
-        AnnotatedBeanDefinition annotatedBeanDefinition  =new AnnotatedGenericBeanDefinition(beanClass);
+        AnnotatedBeanDefinition annotatedBeanDefinition = new AnnotatedGenericBeanDefinition(beanClass);
 
         //可以自动生成name
-        String beanName = (name !=null?name:this.beanNameGenerator.generateBeanName(annotatedBeanDefinition,registry));
+        String beanName = (name != null ? name : this.beanNameGenerator.generateBeanName(annotatedBeanDefinition , registry));
 
         //bean注册的holer类.
-        BeanDefinitionHolder beanDefinitionHolder=new BeanDefinitionHolder(annotatedBeanDefinition,beanName);
+        BeanDefinitionHolder beanDefinitionHolder = new BeanDefinitionHolder(annotatedBeanDefinition , beanName);
 
         //使用bean注册工具类进行注册.
-        BeanDefinitionReaderUtils.registerBeanDefinition(beanDefinitionHolder,registry);
+        BeanDefinitionReaderUtils.registerBeanDefinition(beanDefinitionHolder , registry);
 
     }
 }

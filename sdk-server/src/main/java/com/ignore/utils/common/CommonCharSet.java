@@ -3,7 +3,7 @@ package com.ignore.utils.common;
 import java.nio.charset.Charset;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 18:38 2018/11/15
  */

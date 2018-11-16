@@ -23,7 +23,7 @@ public class WriteDbLogServiceAsync {
     @Autowired
     private ExecutorService executor;
 
-    public void writeDbLog(DbLogDTO dbLogDTO){
-        executor.execute(()->commonServerClient.writeDbLog(dbLogDTO));
+    public void writeDbLog(DbLogDTO dbLogDTO) {
+        executor.execute(() -> commonServerClient.writeDbLog(dbLogDTO));
     }
 }
