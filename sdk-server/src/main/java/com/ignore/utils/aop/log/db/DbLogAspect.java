@@ -1,8 +1,8 @@
-package com.ignore.utils.aop.aspect.log.db;
+package com.ignore.utils.aop.log.db;
 
 import com.ignore.dto.common.dblog.DbLogDTO;
-import com.ignore.utils.aop.aspect.log.DbOutputLog;
-import com.ignore.utils.aop.aspect.log.db.async.WriteDbLogServiceAsync;
+import com.ignore.utils.aop.log.DbOutputLog;
+import com.ignore.utils.aop.log.db.async.WriteDbLogServiceAsync;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

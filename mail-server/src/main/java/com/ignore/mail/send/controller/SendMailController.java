@@ -1,7 +1,7 @@
 package com.ignore.mail.send.controller;
 
 import com.ignore.mail.send.service.impl.SendMailServiceImpl;
-import com.ignore.utils.aop.aspect.log.DbOutputLog;
+import com.ignore.utils.aop.log.DbOutputLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

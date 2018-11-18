@@ -1,4 +1,4 @@
-package com.ignore.utils.aop.aspect.log.trace;
+package com.ignore.utils.aop.log.trace;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

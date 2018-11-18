@@ -1,4 +1,4 @@
-package com.ignore.utils.aop.aspect.log.db.async;
+package com.ignore.utils.aop.log.db.async;
 
 import com.ignore.client.CommonServerClient;
 import com.ignore.dto.common.dblog.DbLogDTO;

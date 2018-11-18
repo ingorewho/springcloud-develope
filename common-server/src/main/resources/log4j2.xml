@@ -4,7 +4,7 @@
 <configuration status="debug" monitorInterval="30" packages="com.ignore.utils.log">
 
     <properties>
-        <Property name="filePath">/tmp/ignore/mail_server</Property>
+        <Property name="filePath">/tmp/ignore/common_server</Property>
         <Property name="logPattern">%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n</Property>
     </properties>
 
