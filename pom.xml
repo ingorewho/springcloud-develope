@@ -184,6 +184,8 @@
         <module>sdk-server</module>
         <module>mail-server</module>
         <module>common-server</module>
+        <module>query-server</module>
+        <module>druid-monitor-server</module>
     </modules>
 
 

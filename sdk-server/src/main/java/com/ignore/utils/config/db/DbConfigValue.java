@@ -7,9 +7,14 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface DbConfigValue {
     /**
-     * 
+     * 配置key值
      * @return
      */
-    String value();
+    String key();
 
+    /**
+     * 是否必需
+     * @return
+     */
+    boolean required() default false;
 }

@@ -26,11 +26,19 @@ public class DbConfigHandler{
 
         beans.parallelStream().forEach(aBean -> {
             Class<?> aClass = aBean.getClass().getSuperclass();
-            DbConfigValue configValue = aClass.getAnnotation(DbConfigValue.class);
             Field[] aFieds = aClass.getFields();
-            
+
 
         });
     }
 
+    private void dealFields(Field[] aFields){
+        for (Field aField : aFields){
+            aField.setAccessible(true);
+            DbConfigValue configValue = aField.getAnnotation(DbConfigValue.class);
+            if (configValue.required()){
+
+            }
+        }
+    }
 }
