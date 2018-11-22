@@ -1,9 +1,10 @@
 server:
-  port: 7001
+  port: 7007
 spring:
   application:
-    name: eureka-client
-
+    name: query-server
+  profiles:
+    active: eureka,config,log
 eureka:
   client:
     service-url:
