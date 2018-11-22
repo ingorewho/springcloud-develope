@@ -9,8 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>druid-monitor-server</artifactId>
-    <groupId>druid-monitor-server</groupId>
+    <artifactId>druid-db-monitor</artifactId>
+    <groupId>druid-db-monitor</groupId>
     <dependencies>
         <!-- druid -->
         <dependency>

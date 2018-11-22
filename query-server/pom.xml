@@ -19,8 +19,8 @@
         </dependency>
 
         <dependency>
-            <groupId>druid-monitor-server</groupId>
-            <artifactId>druid-monitor-server</artifactId>
+            <groupId>druid-db-monitor</groupId>
+            <artifactId>druid-db-monitor</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
