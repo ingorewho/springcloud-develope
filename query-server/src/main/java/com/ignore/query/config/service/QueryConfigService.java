@@ -10,5 +10,5 @@ import java.util.List;
  * @Date: Created In 16:31 2018/11/21
  */
 public interface QueryConfigService {
-    List<DbConfigEntity> getAllConfig();
+    List<DbConfigEntity> getAllConfigs();
 }

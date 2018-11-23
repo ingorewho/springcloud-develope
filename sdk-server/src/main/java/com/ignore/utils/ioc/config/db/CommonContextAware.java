@@ -1,4 +1,4 @@
-package com.ignore.utils.config.db;
+package com.ignore.utils.ioc.config.db;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

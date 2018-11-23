@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 public class QueryConfigServiceImpl implements QueryConfigService{
     @Override
-    public List<DbConfigEntity> getAllConfig() {
+    public List<DbConfigEntity> getAllConfigs() {
         return null;
     }
 }

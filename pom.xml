@@ -176,7 +176,6 @@
 
     <modules>
         <module>eureka-server</module>
-        <module>eureka-client</module>
         <module>zuul-server</module>
         <module>base-server</module>
         <module>config-server</module>
@@ -185,7 +184,7 @@
         <module>mail-server</module>
         <module>common-server</module>
         <module>query-server</module>
-        <module>druid-monitor-server</module>
+        <module>druid-db-monitor</module>
     </modules>
 
 

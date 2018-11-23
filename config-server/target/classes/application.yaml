@@ -9,7 +9,7 @@ spring:
         git:
           uri: https://github.com/ingorewho/springcloud-develope/
           search-paths: config
-          username: 17761256463
+          username: *****
           password: *****
 
 eureka:
