@@ -5,6 +5,7 @@ import com.ignore.entity.db.config.DbConfigEntity;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
@@ -26,6 +27,9 @@ public class DbConfigHandler{
     private Logger logger = LogManager.getLogger();
 
     private List<String> beanNames = new ArrayList<>();
+
+    @Autowired
+
 
     public void handle(List<Object> beans){
         if (CollectionUtils.isEmpty(beans)){

@@ -13,16 +13,18 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class DbConfigFeignClientUtils {
-    private static QueryServerClient queryServerClient;
+    public static QueryServerClient queryServerClient;
 
     public static QueryServerClient getQueryServerClient() {
         return queryServerClient;
     }
 
-
+    public static void setQueryServerClient(QueryServerClient queryServerClient){
+        DbConfigFeignClientUtils.queryServerClient = queryServerClient;
+    }
 
     @Autowired(required = false)
     public void setPath(QueryServerClient queryServerClient){
-        DbConfigFeignClientUtils.queryServerClient = queryServerClient;
+        DbConfigFeignClientUtils.setQueryServerClient(queryServerClient);
     }
 }

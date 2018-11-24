@@ -42,9 +42,9 @@ ribbon:
     enabled: true
 ###redis config
 spring.redis:
-    hostName: 10.8.201.21
-    port: 6379
-    password: sinosig123
+    hostName: 127.0.0.1
+    port: 7000
+    password: 111
     timeout: 10000
 
 #admin client
