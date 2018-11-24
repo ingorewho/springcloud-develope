@@ -2,365 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1444409-7d53-44d0-ad51-d81af338fe71" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common-server/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/CommonServerApplication.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/dblog/controller/DbLogController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/dblog/service/DbLogService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/dblog/service/impl/DbLogServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/common-server/src/main/resources/application.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/mail-server/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/mail-server/src/main/java/com/ignore/mail/MailServerApplication.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/mail-server/src/main/java/com/ignore/mail/send/controller/SendMailController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/mail-server/src/main/resources/application.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/sdk-server/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/SdkServerApplication.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/client/CommonServerClient.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/cons/ServerConfigConst.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/dto/common/dblog/DbLogDTO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/entity/common/dblog/DbLogEntity.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/enumerate/ServerEnum.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/aspect/log/db/DbOutputLog.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/aspect/log/db/DbOutputLogAspectHandler.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/aspect/log/db/async/WriteDbLogServiceAsync.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/aspect/log/trace/TraceLogAspectHandler.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/sdk-server/src/main/resources/application.yaml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/db-server/pom.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/db-server/src/main/java/com/ignore/druid/config/DruidDbConfig.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/db-server/src/main/java/com/ignore/druid/config/DruidMonitorConfig.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/log-server/pom.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/zuul/filter/ErrorFilter.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/zuul/filter/PostFilter.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/zuul/filter/RouteFilter.java" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_44.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_27.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_10.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_10.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_xml_2_8_10.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_afterburner_2_8_10.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_8_10.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_5_0_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_18_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_3_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_javaewah_JavaEWAH_0_7_9.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jcraft_jsch_0_1_54.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_lmax_disruptor_3_3_6.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_archaius_archaius_core_0_7_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_client_1_7_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_core_1_7_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_core_1_5_12.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_javanica_1_5_12.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_metrics_event_stream_1_5_12.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_serialization_1_5_12.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_commons_util_0_1_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_eventbus_0_3_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_infix_0_3_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_statistics_0_1_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_2_2_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_core_2_2_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_eureka_2_2_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_httpclient_2_2_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_loadbalancer_2_2_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_transport_2_2_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_servo_servo_core_0_10_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_servo_servo_internal_0_10_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_zuul_zuul_core_1_3_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_8_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_13_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_apache_client4_1_19_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_19_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_19_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_19_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_servlet_1_19_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_4_9.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_8.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_jxpath_commons_jxpath_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_0_27_Final.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_0_27_Final.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_0_27_Final.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_0_27_Final.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_0_27_Final.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_0_27_Final.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_4_0_27_Final.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_1_2_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_0_4_9.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_contexts_0_4_9.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_servo_0_4_9.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_reporter_2_1_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_sender_amqp_client_2_1_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_sender_kafka11_2_1_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_zipkin2_zipkin_2_3_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_jsr311_api_1_1_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_9_9.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_stringtemplate_3_2_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_7.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math_2_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_8.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_7.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_7.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_slf4j_impl_2_7.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_23.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_23.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_23.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_8_5_23.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_13.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_2_6_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_beanshell_bsh_2_0b4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_55.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_55.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_3_7.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_4_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jgit_org_eclipse_jgit_3_6_1_201501031845_r.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_27_incubating.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_9.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_6_Final.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_1_Final.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_20.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_4_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_9_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_1_5_9_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_9_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_9_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_1_5_9_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_5_9_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_freemarker_1_5_9_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_log4j2_1_5_9_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_9_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_5_9_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_9_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_9_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_5_9_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_5_9_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_1_3_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_client_1_4_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_server_1_4_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_1_3_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_core_1_4_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_client_1_4_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_server_1_4_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_sleuth_core_1_3_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_sleuth_zipkin_1_3_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_1_3_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_eureka_1_4_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_eureka_server_1_4_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_hystrix_1_4_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_archaius_1_4_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_client_1_4_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_server_1_4_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_hystrix_1_4_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_ribbon_1_4_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_zuul_1_4_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_sleuth_1_3_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_zipkin_1_3_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_zuul_1_4_0_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_4_2_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_rsa_1_0_3_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_13_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_13_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_13_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_13_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_13_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_13_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_13_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_13_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_13_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_8_13.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_uncommons_reportng_1_1_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__velocity_velocity_1_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__velocity_velocity_dep_1_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/base-sdk/pom.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/annotation/self/service/ParentDefine.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/annotation/self/service/ParentDefine.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/annotation/self/service/SelfDefine.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/annotation/self/service/SelfDefine.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/annotation/self/service/SelfDefineBean.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/annotation/self/service/SelfDefineBean.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/annotation/self/service/SelfDefineBeanChild.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/annotation/self/service/SelfDefineBeanChild.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/annotation/self/service/SelfDefineService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/annotation/self/service/SelfDefineService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/annotation/self/service/SelfDefines.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/annotation/self/service/SelfDefines.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/annotation/self/test/TestSelfDefineService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/annotation/self/test/TestSelfDefineService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/annotation/spring/service/MvcAnnoationService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/annotation/spring/service/MvcAnnoationService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/jdk1_8/concurrent/BlockingQueueService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/jdk1_8/concurrent/BlockingQueueService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/jdk1_8/default_method/DefaultMethodInterface.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/jdk1_8/default_method/DefaultMethodInterface.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/jdk1_8/default_method/DefaultMethodServiceImpl.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/jdk1_8/default_method/DefaultMethodServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/jdk1_8/io/BufferedReaderService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/jdk1_8/io/BufferedReaderService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/jdk1_8/lambda/BaseOperateService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/jdk1_8/lambda/BaseOperateService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/jdk1_8/lambda/CollectorsOperateService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/jdk1_8/lambda/CollectorsOperateService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/jdk1_8/lambda/ListOperateService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/jdk1_8/lambda/ListOperateService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/jdk1_8/lambda/MapOperateService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/jdk1_8/lambda/MapOperateService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/jdk1_8/lambda/StreamOperateService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/jdk1_8/lambda/StreamOperateService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/jdk1_8/set/CollectionUtilsService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/jdk1_8/set/CollectionUtilsService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/jdk1_8/set/CollectionsService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/jdk1_8/set/CollectionsService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/jdk1_8/set/MapUtilsService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/jdk1_8/set/MapUtilsService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/jdk1_8/set/MapsService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/jdk1_8/set/MapsService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/jdk1_8/set/OptionalService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/jdk1_8/set/OptionalService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/json/alibaba/FastJSONService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/json/alibaba/FastJSONService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/json/alibaba/entity/Animal.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/json/alibaba/entity/Animal.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/json/alibaba/entity/Person.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/json/alibaba/entity/Person.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/json/alibaba/service/AlibabaJsonDeserialService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/json/alibaba/service/AlibabaJsonDeserialService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/json/alibaba/service/AlibabaJsonObjectService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/json/alibaba/service/AlibabaJsonObjectService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/json/alibaba/service/AlibabaJsonSerialService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/json/alibaba/service/AlibabaJsonSerialService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/json/test/Main.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/json/test/Main.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/json/test/TestAlibabaJson.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/json/test/TestAlibabaJson.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/jvm/btrace/BTraceService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/jvm/btrace/BTraceService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/aop/ClassAnnoation.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/ClassAnnoation.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/aop/LogOutput.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/LogOutput.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/aop/aspect/AspectService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/aspect/AspectService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/aop/introduction/IntroductionService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/introduction/IntroductionService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/aop/pointcut/PointCutService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/pointcut/PointCutService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/aop/proxy/SpringAopProxy.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/proxy/SpringAopProxy.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/aop/proxy/cglibproxy/CglibMethodInterceptor.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/proxy/cglibproxy/CglibMethodInterceptor.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/aop/proxy/cglibproxy/CglibProxyHandler.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/proxy/cglibproxy/CglibProxyHandler.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/aop/proxy/cglibproxy/CglibProxyService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/proxy/cglibproxy/CglibProxyService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/aop/proxy/cglibproxy/TestCglibProxy.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/proxy/cglibproxy/TestCglibProxy.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/aop/proxy/jdkproxy/JDKProxyHandler.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/proxy/jdkproxy/JDKProxyHandler.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/aop/proxy/jdkproxy/JDKProxyService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/proxy/jdkproxy/JDKProxyService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/aop/proxy/jdkproxy/JDKServiceImpl.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/proxy/jdkproxy/JDKServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/aop/proxy/jdkproxy/TestJDKProxy.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/proxy/jdkproxy/TestJDKProxy.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/aop/sevice/BaseBizService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/sevice/BaseBizService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/aop/sevice/ExtendService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/sevice/ExtendService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/aop/sevice/impl/BaseBizServiceImpl.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/sevice/impl/BaseBizServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/aop/sevice/impl/ExtendServiceImpl.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/sevice/impl/ExtendServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/async/config/AsyncTaskConfig.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/async/config/AsyncTaskConfig.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/async/controller/BaseBizController.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/async/controller/BaseBizController.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/async/service/AsyncHandlerService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/async/service/AsyncHandlerService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/async/service/AsyncService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/async/service/AsyncService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/async/service/CallAsyncService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/async/service/CallAsyncService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/test/AsyncTest.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/test/AsyncTest.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/test/BaseBizTest.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/test/BaseBizTest.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/spring/test/IntroductionTest.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/test/IntroductionTest.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/webservice/client/controller/AxisClientController.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/client/controller/AxisClientController.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/webservice/client/controller/BaseClientController.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/client/controller/BaseClientController.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/webservice/client/service/AbstractCallWebService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/client/service/AbstractCallWebService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/webservice/client/service/CallWebService.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/client/service/CallWebService.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/webservice/client/service/axis/AxisCallWebServiceImpl.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/client/service/axis/AxisCallWebServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/webservice/dto/request/AxisReqDTO.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/dto/request/AxisReqDTO.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/webservice/dto/request/BaseReqDTO.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/dto/request/BaseReqDTO.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/webservice/dto/response/AxisRepsDTO.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/dto/response/AxisRepsDTO.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/webservice/dto/response/BaseResponseDTO.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/dto/response/BaseResponseDTO.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/webservice/server/config/CxfWebServiceConfig.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/server/config/CxfWebServiceConfig.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/webservice/server/service/WebServiceServer.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/server/service/WebServiceServer.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/webservice/server/service/impl/WebServiceImpl.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/server/service/impl/WebServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/src/main/java/com/webservice/test/TestAxisController.java" afterPath="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/test/TestAxisController.java" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/BaseServerApplication.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/annotation/self/service/ParentDefine.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/annotation/self/service/SelfDefine.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/annotation/self/service/SelfDefineBean.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/annotation/self/service/SelfDefineBeanChild.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/annotation/self/service/SelfDefineService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/annotation/self/service/SelfDefines.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/annotation/self/test/TestSelfDefineService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/annotation/spring/service/MvcAnnoationService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/concurrent/BlockingQueueService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/jdk1_8/default_method/DefaultMethodInterface.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/jdk1_8/default_method/DefaultMethodServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/jdk1_8/io/BufferedReaderService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/jdk1_8/lambda/BaseOperateService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/jdk1_8/lambda/CollectorsOperateService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/jdk1_8/lambda/ListOperateService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/jdk1_8/lambda/MapOperateService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/jdk1_8/lambda/StreamOperateService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/jdk1_8/lambda/TestFunc.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/jdk1_8/set/CollectionUtilsService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/jdk1_8/set/CollectionsService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/jdk1_8/set/MapUtilsService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/jdk1_8/set/MapsService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/jdk1_8/set/OptionalService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/json/alibaba/FastJSONService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/json/alibaba/entity/Animal.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/json/alibaba/entity/Person.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/json/alibaba/service/AlibabaJsonDeserialService$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/json/alibaba/service/AlibabaJsonDeserialService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/json/alibaba/service/AlibabaJsonObjectService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/json/alibaba/service/AlibabaJsonSerialService$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/json/alibaba/service/AlibabaJsonSerialService$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/json/alibaba/service/AlibabaJsonSerialService$3.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/json/alibaba/service/AlibabaJsonSerialService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/json/test/A.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/json/test/B.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/json/test/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/json/test/TestAlibabaJson.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/jvm/btrace/BTraceService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/aop/ClassAnnoation.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/aop/LogOutput.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/aop/aspect/AspectService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/aop/introduction/IntroductionService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/aop/pointcut/PointCutService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/aop/proxy/SpringAopProxy.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/aop/proxy/cglibproxy/CglibMethodInterceptor.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/aop/proxy/cglibproxy/CglibProxyHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/aop/proxy/cglibproxy/CglibProxyService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/aop/proxy/cglibproxy/TestCglibProxy.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/aop/proxy/jdkproxy/JDKProxyHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/aop/proxy/jdkproxy/JDKProxyService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/aop/proxy/jdkproxy/JDKServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/aop/proxy/jdkproxy/TestJDKProxy.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/aop/sevice/BaseBizService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/aop/sevice/ExtendService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/aop/sevice/impl/BaseBizServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/aop/sevice/impl/ExtendServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/async/config/AsyncTaskConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/async/controller/BaseBizController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/async/service/AsyncHandlerService$MyAsyncExceptionHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/async/service/AsyncHandlerService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/async/service/AsyncService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/async/service/CallAsyncService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/test/AsyncTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/test/BaseBizTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/spring/test/IntroductionTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/webservice/server/config/CxfWebServiceConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/webservice/server/service/WebServiceServer.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/base-server/target/classes/com/webservice/server/service/impl/WebServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/config-server/target/classes/application.yaml" afterPath="$PROJECT_DIR$/config-server/target/classes/application.yaml" />
-      <change beforePath="$PROJECT_DIR$/config-server/target/classes/com/ConfigApplication.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/config/port/port.txt" afterPath="$PROJECT_DIR$/config/port/port.txt" />
-      <change beforePath="$PROJECT_DIR$/eureka-client/src/main/java/com/client/EurekaClientApplication.java" afterPath="$PROJECT_DIR$/eureka-client/src/main/java/com/ignore/client/EurekaClientApplication.java" />
-      <change beforePath="$PROJECT_DIR$/eureka-client/src/main/java/com/client/controller/EurekaClientController.java" afterPath="$PROJECT_DIR$/eureka-client/src/main/java/com/ignore/EurekaClientController.java" />
-      <change beforePath="$PROJECT_DIR$/eureka-client/target/classes/com/client/EurekaClientApplication.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/eureka-client/target/classes/com/client/controller/EurekaClientController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/java/com/server/EurekaServerApplication.java" afterPath="$PROJECT_DIR$/eureka-server/src/main/java/com/ignore/server/EurekaServerApplication.java" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/target/classes/com/server/EurekaServerApplication.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hystrix-server/src/main/java/com/server/controller/ProduceController.java" afterPath="$PROJECT_DIR$/hystrix-server/src/main/java/com/ignore/server/controller/ProduceController.java" />
-      <change beforePath="$PROJECT_DIR$/hystrix-server/src/main/java/com/server/service/ProduceService.java" afterPath="$PROJECT_DIR$/hystrix-server/src/main/java/com/ignore/server/service/ProduceService.java" />
-      <change beforePath="$PROJECT_DIR$/hystrix-server/target/classes/application.yaml" afterPath="$PROJECT_DIR$/hystrix-server/target/classes/application.yaml" />
-      <change beforePath="$PROJECT_DIR$/hystrix-server/target/classes/com/HystrixApplication.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hystrix-server/target/classes/com/server/controller/ProduceController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hystrix-server/target/classes/com/server/service/ProduceService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/common-server/pom.xml" afterPath="$PROJECT_DIR$/common-server/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/CommonServerApplication.java" afterPath="$PROJECT_DIR$/log-server/src/main/java/com/ignore/LogServerApplication.java" />
+      <change beforePath="$PROJECT_DIR$/common-server/src/main/resources/application.yaml" afterPath="$PROJECT_DIR$/log-server/src/main/resources/application.yaml" />
+      <change beforePath="$PROJECT_DIR$/common-server/src/main/resources/log4j2.xml" afterPath="$PROJECT_DIR$/log-server/src/main/resources/log4j2.xml" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application-eureka.yml" afterPath="$PROJECT_DIR$/config-server/src/main/resources/application-eureka.yml" />
+      <change beforePath="$PROJECT_DIR$/config/application-dev.yaml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/config/application-pro.yaml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/druid-db-monitor/pom.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/druid-db-monitor/src/main/java/com/ignore/druid/config/DruidDbConfig.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/druid-db-monitor/src/main/java/com/ignore/druid/config/DruidMonitorConfig.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/target/classes/application.yaml" afterPath="$PROJECT_DIR$/eureka-server/target/classes/application.yaml" />
+      <change beforePath="$PROJECT_DIR$/log-server/src/main/java/com/ignore/common/dblog/controller/DbLogController.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/log-server/src/main/java/com/ignore/common/dblog/service/DbLogService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/log-server/src/main/java/com/ignore/common/dblog/service/impl/DbLogServiceImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/mail-server/pom.xml" afterPath="$PROJECT_DIR$/mail-server/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/mail-server/src/main/java/com/ignore/mail/send/controller/SendMailController.java" afterPath="$PROJECT_DIR$/mail-server/src/main/java/com/ignore/mail/send/controller/SendMailController.java" />
       <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/zuul/ZuulApplication.java" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/ZuulApplication.java" />
+      <change beforePath="$PROJECT_DIR$/query-server/pom.xml" afterPath="$PROJECT_DIR$/query-server/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/async/AsyncConfigService.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/thread/async/AsyncConfigService.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/async/CommonAysncConfigTask.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/thread/async/CommonAysncConfigTask.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/async/config/AsyncConfig.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/thread/async/config/AsyncConfig.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/async/config/impl/AsyncThreadPoolConfig.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/thread/async/config/impl/AsyncThreadPoolConfig.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/client/CommonServerClient.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/client/CommonServerClient.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/client/QueryServerClient.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/client/QueryServerClient.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/thread/CommonAsyncConfigExecutor.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/thread/common/CommonAsyncConfigExecutor.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/thread/common/CommonThreadExecutor.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/thread/common/CommonThreadExecutor.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/log/DbOutputLog.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/aop/log/DbOutputLog.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/log/db/DbLogAspect.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/aop/log/db/DbLogAspect.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/log/db/async/WriteDbLogServiceAsync.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/aop/log/db/async/WriteDbLogServiceAsync.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/log/trace/TraceLogAspect.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/aop/log/trace/TraceLogAspect.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/common/CommonCharSet.java" afterPath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/cons/CommonCharSet.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/common/EncryptUtils.java" afterPath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/common/EncryptUtils.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/common/FileUtils.java" afterPath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/common/FileUtils.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/ioc/CommonContextAware.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/ioc/CommonContextAware.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/ioc/SpringIOCService.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/ioc/SpringIOCService.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/ioc/config/db/DbConfigFeignClientUtils.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/ioc/config/db/DbConfigFeignClientUtils.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/ioc/config/db/DbConfigHandler.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/ioc/config/db/DbConfigHandler.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/ioc/config/db/DbConfigIOCService.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/ioc/config/db/DbConfigIOCService.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/ioc/config/db/DbConfigPostAwareAdpter.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/ioc/config/db/DbConfigPostAwareAdpter.java" />
+      <change beforePath="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/ioc/config/db/DbConfigValue.java" afterPath="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/ioc/config/db/DbConfigValue.java" />
+      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/zuul/filter/CommonFilter.java" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/zuul/filter/PreFilter.java" />
+      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/zuul/filter/config/FilterConfig.java" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/zuul/filter/config/FilterConfig.java" />
+      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/resources/application.yaml" afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/application.yaml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -375,6 +70,10 @@
     <ignored path="$PROJECT_DIR$/mail-server/target/" />
     <ignored path="$PROJECT_DIR$/sdk-server/target/" />
     <ignored path="$PROJECT_DIR$/common-server/target/" />
+    <ignored path="$PROJECT_DIR$/query-server/target/" />
+    <ignored path="$PROJECT_DIR$/druid-db-monitor/target/" />
+    <ignored path="$PROJECT_DIR$/log-server/target/" />
+    <ignored path="$PROJECT_DIR$/db-server/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -388,48 +87,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="CommonServerApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/CommonServerApplication.java">
+      <file leaf-file-name="CommonAysncConfigTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/thread/async/CommonAysncConfigTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#569#570#0" expanded="true" />
-                <element signature="e#643#644#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common-server/src/main/resources/application.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common-server/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DbOutputLogAspectHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/aspect/log/db/DbOutputLogAspectHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+            <state relative-caret-position="-559">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DbLogAspect.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/aop/log/db/DbLogAspect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-640">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -438,41 +113,57 @@
         <entry file="file://$PROJECT_DIR$/eureka-server/src/main/java/com/ignore/server/EurekaServerApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MailServerApplication.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mail-server/src/main/java/com/ignore/mail/MailServerApplication.java">
+      <file leaf-file-name="MailServerApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mail-server/src/main/java/com/ignore/MailServerApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+            <state relative-caret-position="162">
+              <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WriteDbLogServiceAsync.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/aspect/log/db/async/WriteDbLogServiceAsync.java">
+      <file leaf-file-name="QueryServerApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/query-server/src/main/java/com/ignore/QueryServerApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="23" column="46" lean-forward="false" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#618#619#0" expanded="true" />
-                <element signature="e#673#674#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="236">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommonServerClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/client/CommonServerClient.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/query-server/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="128">
+              <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.yaml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/query-server/src/main/resources/application.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SendMailController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mail-server/src/main/java/com/ignore/mail/send/controller/SendMailController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="25" column="15" lean-forward="false" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -481,10 +172,10 @@
         </entry>
       </file>
       <file leaf-file-name="DbLogController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/dblog/controller/DbLogController.java">
+        <entry file="file://$PROJECT_DIR$/log-server/src/main/java/com/ignore/log/dblog/controller/DbLogController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="653">
-              <caret line="28" column="40" lean-forward="false" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+            <state relative-caret-position="143">
+              <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -492,14 +183,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SendMailController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mail-server/src/main/java/com/ignore/mail/send/controller/SendMailController.java">
+      <file leaf-file-name="WriteDbLogServiceAsync.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/aop/log/db/async/WriteDbLogServiceAsync.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+            <state relative-caret-position="405">
+              <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
               <folding>
-                <element signature="e#702#703#0" expanded="true" />
-                <element signature="e#736#737#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -512,9 +202,10 @@
       <list>
         <option value="AnnotationType" />
         <option value="spring-beans.schema" />
-        <option value="Interface" />
         <option value="Kotlin Enum" />
         <option value="Enum" />
+        <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -545,6 +236,8 @@
       <find>startupShutdownMonitor</find>
       <find>feig</find>
       <find>FeignClient</find>
+      <find>filterOrder</find>
+      <find>server</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -558,57 +251,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/server/config/CxfWebServiceConfig.java" />
-        <option value="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/server/service/WebServiceServer.java" />
-        <option value="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/server/service/impl/WebServiceImpl.java" />
-        <option value="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/test/TestAxisController.java" />
-        <option value="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/client/controller/AxisClientController.java" />
-        <option value="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/client/controller/BaseClientController.java" />
-        <option value="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/client/service/AbstractCallWebService.java" />
-        <option value="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/client/service/axis/AxisCallWebServiceImpl.java" />
-        <option value="$PROJECT_DIR$/base-server/src/main/java/com/ignore/webservice/client/service/CallWebService.java" />
-        <option value="$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/async/controller/BaseBizController.java" />
-        <option value="$PROJECT_DIR$/base-server/src/main/java/com/ignore/json/alibaba/entity/Animal.java" />
-        <option value="$PROJECT_DIR$/base-server/src/main/java/com/ignore/json/alibaba/entity/Person.java" />
-        <option value="$PROJECT_DIR$/base-server/src/main/java/com/ignore/json/alibaba/service/AlibabaJsonObjectService.java" />
-        <option value="$PROJECT_DIR$/base-server/src/main/java/com/ignore/json/alibaba/FastJSONService.java" />
-        <option value="$PROJECT_DIR$/base-server/src/main/java/com/ignore/json/test/TestAlibabaJson.java" />
-        <option value="$PROJECT_DIR$/base-server/src/main/java/com/ignore/json/alibaba/service/AlibabaJsonDeserialService.java" />
-        <option value="$PROJECT_DIR$/base-server/src/main/java/com/ignore/json/alibaba/service/AlibabaJsonSerialService.java" />
-        <option value="$PROJECT_DIR$/base-sdk/src/main/java/com/ignore/utils/aop/aspect/log/LogAspectHandler.java" />
-        <option value="$PROJECT_DIR$/base-sdk/src/main/java/com/ignore/utils/aop/aspect/log/InputOutputLog.java" />
-        <option value="$PROJECT_DIR$/base-sdk/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/query-server/src/main/resources/application.yaml" />
         <option value="$PROJECT_DIR$/mail-server/src/main/resources/application.yaml" />
-        <option value="$PROJECT_DIR$/base-sdk/src/main/java/com/ignore/utils/aop/aspect/log/TraceLogAspectHandler.java" />
-        <option value="$PROJECT_DIR$/eureka-server/src/main/java/com/ignore/server/EurekaServerApplication.java" />
-        <option value="$PROJECT_DIR$/base-sdk/src/main/resources/application.yaml" />
-        <option value="$PROJECT_DIR$/base-sdk/src/main/java/com/ignore/SdkServerApplication.java" />
-        <option value="$PROJECT_DIR$/mail-server/src/main/java/com/ignore/mail/send/controller/SendMailController.java" />
-        <option value="$PROJECT_DIR$/sdk-server/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/mail-server/pom.xml" />
-        <option value="$PROJECT_DIR$/mail-server/src/main/java/com/ignore/MailServerApplication.java" />
-        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/aspect/log/TraceLogAspectHandler.java" />
-        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/aspect/db/InputOutputLog.java" />
-        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/aspect/db/DbOutputLog.java" />
-        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/aspect/db/DbOutputLogAspectHandler.java" />
-        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/aspect/log/trace/TraceLogAspectHandler.java" />
-        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/dto/common/dblog/DbLogDTO.java" />
-        <option value="$PROJECT_DIR$/common-server/pom.xml" />
-        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/entity/common/dblog/DbLogEntity.java" />
-        <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/dblog/service/DbLogService.java" />
-        <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/dblog/service/impl/DbLogServiceImpl.java" />
+        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/config/db/DbConfigHandler.java" />
+        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/ioc/config/db/DbConfigAdpterAware.java" />
+        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/ioc/config/db/DbConfigAwareAdpter.java" />
+        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/ioc/config/db/DbConfigPostAwareAdpter.java" />
+        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/ioc/config/db/DbConfigIOCService.java" />
+        <option value="$PROJECT_DIR$/druid-db-monitor/src/main/java/com/ignore/druid/config/DruidMonitorConfig.java" />
+        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/ioc/config/db/DbConfigFeignClientUtils.java" />
+        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/ioc/CommonContextAware.java" />
+        <option value="$PROJECT_DIR$/eureka-server/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/ioc/config/db/DbConfigHandler.java" />
         <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/dblog/controller/DbLogController.java" />
-        <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/CommonServerApplication.java" />
-        <option value="$PROJECT_DIR$/common-server/src/main/resources/application.yaml" />
-        <option value="$PROJECT_DIR$/config/port/port.txt" />
-        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/enum/ServerEnum.kt" />
-        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/enumerate/ServerEnum.java" />
-        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/cons/ServerConfigConst.java" />
-        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/client/CommonServerClient.java" />
-        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/aspect/log/db/async/WriteDbLogServiceAsync.java" />
-        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/aspect/log/db/DbOutputLogAspectHandler.java" />
-        <option value="$PROJECT_DIR$/mail-server/src/main/java/com/ignore/mail/MailServerApplication.java" />
+        <option value="$PROJECT_DIR$/config-server/src/main/resources/application-eureka.yml" />
+        <option value="$PROJECT_DIR$/zuul-server/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/zuul/filter/CommonFilter.java" />
+        <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/zuul/filter/RouteFilter.java" />
+        <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/zuul/filter/PostFilter.java" />
+        <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/zuul/filter/ErrorFilter.java" />
+        <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/zuul/filter/PreFilter.java" />
+        <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/zuul/filter/config/FilterConfig.java" />
+        <option value="$PROJECT_DIR$/log-server/src/main/java/com/ignore/log/dblog/service/DbLogService.java" />
+        <option value="$PROJECT_DIR$/log-server/src/main/java/com/ignore/log/dblog/service/impl/DbLogServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/log-server/pom.xml" />
+        <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/async/CommonAysncConfigTask.java" />
+        <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/thread/CommonAsyncConfigExecutor.java" />
+        <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/aop/log/db/async/WriteDbLogServiceAsync.java" />
+        <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/ioc/config/db/DbConfigIOCService.java" />
+        <option value="$PROJECT_DIR$/common-server/pom.xml" />
+        <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/client/QueryServerClient.java" />
+        <option value="$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/cons/CommonCharSet.java" />
+        <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/thread/common/CommonAsyncConfigExecutor.java" />
+        <option value="$PROJECT_DIR$/db-server/src/main/java/com/ignore/druid/config/DruidDbConfig.java" />
+        <option value="$PROJECT_DIR$/db-server/pom.xml" />
+        <option value="$PROJECT_DIR$/db-server/src/main/java/com/ignore/druid/config/DruidMonitorConfig.java" />
+        <option value="$PROJECT_DIR$/query-server/pom.xml" />
+        <option value="$PROJECT_DIR$/mail-server/pom.xml" />
+        <option value="$PROJECT_DIR$/sdk-server/pom.xml" />
+        <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/ioc/config/db/DbConfigFeignClientUtils.java" />
+        <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/ioc/config/db/DbConfigHandler.java" />
+        <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/ioc/config/db/DbConfigIOCService.java" />
+        <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/ioc/SpringIOCService.java" />
+        <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/thread/async/AsyncConfigService.java" />
+        <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/thread/async/config/impl/AsyncThreadPoolConfig.java" />
+        <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/aop/log/db/async/WriteDbLogServiceAsync.java" />
+        <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/thread/async/CommonAysncConfigTask.java" />
+        <option value="$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/aop/log/db/DbLogAspect.java" />
+        <option value="$PROJECT_DIR$/log-server/src/main/java/com/ignore/log/dblog/controller/DbLogController.java" />
+        <option value="$PROJECT_DIR$/mail-server/src/main/java/com/ignore/mail/send/controller/SendMailController.java" />
       </list>
     </option>
   </component>
@@ -653,7 +346,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -665,9 +359,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -695,6 +388,10 @@
       <recent name="com.client" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\project\workspace_git\springcloud-develope\common-server\src\main\java\com\ignore\common" />
+      <recent name="G:\project\workspace_git\springcloud-develope\query-server\src\main\resources" />
+      <recent name="G:\project\workspace_git\springcloud-develope\eureka-server\src\main\resources" />
+      <recent name="G:\project\workspace_git\springcloud-develope\common-server\src\main\resources" />
       <recent name="D:\work\project\workspace_springcloud\springcloud\base-server\src\main\java\com\spring" />
     </key>
   </component>
@@ -710,7 +407,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MailServerApplication">
+  <component name="RunManager" selected="Spring Boot.QueryServerApplication">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -718,33 +415,14 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
     </configuration>
-    <configuration name="BlockingQueueService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="concurrent.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="concurrent.BlockingQueueService" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="base-server" />
-      <envs />
-    </configuration>
     <configuration name="MailServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.ignore.mail.*" />
+          <option name="PATTERN" value="com.ignore.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.ignore.mail.MailServerApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.ignore.MailServerApplication" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -759,7 +437,7 @@
     <configuration name="SdkServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.ignore.mail.*" />
+          <option name="PATTERN" value="com.ignore.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -808,6 +486,31 @@
       <module name="" />
       <envs />
     </configuration>
+    <configuration name="ZuulFilter$TestUnit.testIsFilterDisabled" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.netflix.zuul.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.netflix.zuul" />
+      <option name="MAIN_CLASS_NAME" value="com.netflix.zuul.ZuulFilter$TestUnit" />
+      <option name="METHOD_NAME" value="testIsFilterDisabled" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -855,14 +558,14 @@
     </configuration>
     <configuration name="BaseServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.BaseServerApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ignore.BaseServerApplication" />
       <module name="base-server" />
       <envs />
     </configuration>
     <configuration name="CommonServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ignore.common.CommonServerApplication" />
-      <module name="common-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ignore.LogServerApplication" />
+      <module name="log-server" />
       <envs />
     </configuration>
     <configuration name="ConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -902,8 +605,14 @@
     </configuration>
     <configuration name="MailServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ignore.mail.MailServerApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ignore.MailServerApplication" />
       <module name="mail-server" />
+      <envs />
+    </configuration>
+    <configuration name="QueryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ignore.QueryServerApplication" />
+      <module name="query-server" />
       <envs />
     </configuration>
     <configuration name="SdkServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -956,7 +665,7 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="14">
+    <list size="15">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.EurekaServerApplication" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.EurekaClientApplication" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.BaseApplication" />
@@ -965,20 +674,21 @@
       <item index="5" class="java.lang.String" itemvalue="Spring Boot.BaseServerApplication" />
       <item index="6" class="java.lang.String" itemvalue="Spring Boot.MailServerApplication" />
       <item index="7" class="java.lang.String" itemvalue="Spring Boot.SdkServerApplication" />
-      <item index="8" class="java.lang.String" itemvalue="Application.BlockingQueueService" />
-      <item index="9" class="java.lang.String" itemvalue="Application.TestSelfDefineService" />
-      <item index="10" class="java.lang.String" itemvalue="Spring Boot.ZuulApplication" />
-      <item index="11" class="java.lang.String" itemvalue="Application.MailServerApplication" />
-      <item index="12" class="java.lang.String" itemvalue="Application.SdkServerApplication" />
-      <item index="13" class="java.lang.String" itemvalue="Spring Boot.CommonServerApplication" />
+      <item index="8" class="java.lang.String" itemvalue="Spring Boot.CommonServerApplication" />
+      <item index="9" class="java.lang.String" itemvalue="Spring Boot.QueryServerApplication" />
+      <item index="10" class="java.lang.String" itemvalue="Application.TestSelfDefineService" />
+      <item index="11" class="java.lang.String" itemvalue="Spring Boot.ZuulApplication" />
+      <item index="12" class="java.lang.String" itemvalue="Application.MailServerApplication" />
+      <item index="13" class="java.lang.String" itemvalue="Application.SdkServerApplication" />
+      <item index="14" class="java.lang.String" itemvalue="JUnit.ZuulFilter$TestUnit.testIsFilterDisabled" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.MailServerApplication" />
-        <item index="1" class="java.lang.String" itemvalue="Application.SdkServerApplication" />
-        <item index="2" class="java.lang.String" itemvalue="Spring Boot.ZuulApplication" />
-        <item index="3" class="java.lang.String" itemvalue="Application.TestSelfDefineService" />
-        <item index="4" class="java.lang.String" itemvalue="Application.BlockingQueueService" />
+        <item index="1" class="java.lang.String" itemvalue="Spring Boot.ZuulApplication" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ZuulFilter$TestUnit.testIsFilterDisabled" />
+        <item index="3" class="java.lang.String" itemvalue="Application.SdkServerApplication" />
+        <item index="4" class="java.lang.String" itemvalue="Application.TestSelfDefineService" />
       </list>
     </recent_temporary>
   </component>
@@ -1030,7 +740,17 @@
       <workItem from="1541831498717" duration="5534000" />
       <workItem from="1541837082647" duration="266000" />
       <workItem from="1541837375976" duration="5897000" />
-      <workItem from="1541851025179" duration="6732000" />
+      <workItem from="1541851025179" duration="6982000" />
+      <workItem from="1541904602750" duration="10659000" />
+      <workItem from="1542113528184" duration="2542000" />
+      <workItem from="1542370901278" duration="2378000" />
+      <workItem from="1542535170473" duration="4270000" />
+      <workItem from="1542719116732" duration="3090000" />
+      <workItem from="1542975735265" duration="5398000" />
+      <workItem from="1543018893641" duration="11600000" />
+      <workItem from="1543046242645" duration="47000" />
+      <workItem from="1543048130397" duration="8000" />
+      <workItem from="1543064989645" duration="1196000" />
     </task>
     <task id="LOCAL-00001" summary="2018-10-20">
       <created>1540047034440</created>
@@ -1046,7 +766,77 @@
       <option name="project" value="LOCAL" />
       <updated>1541773790963</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="提交sdk及mail">
+      <created>1541857850397</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1541857850397</updated>
+    </task>
+    <task id="LOCAL-00004" summary="提交sdk及mail">
+      <created>1541857994817</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1541857994817</updated>
+    </task>
+    <task id="LOCAL-00005" summary="提交aspect">
+      <created>1541932788730</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1541932788730</updated>
+    </task>
+    <task id="LOCAL-00006" summary="提交aspect">
+      <created>1541932805547</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1541932805547</updated>
+    </task>
+    <task id="LOCAL-00007" summary="提交zuul-filter">
+      <created>1542115792148</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1542115792148</updated>
+    </task>
+    <task id="LOCAL-00008" summary="提交sdk及mail">
+      <created>1542373833056</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1542373833056</updated>
+    </task>
+    <task id="LOCAL-00009" summary="提交log">
+      <created>1542554934249</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1542554934249</updated>
+    </task>
+    <task id="LOCAL-00010" summary="提交dbconfig">
+      <created>1542722329908</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1542722329908</updated>
+    </task>
+    <task id="LOCAL-00011" summary="提交dbconfig">
+      <created>1542981544992</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1542981544992</updated>
+    </task>
+    <task id="LOCAL-00012" summary="提交dbconfig">
+      <created>1543019942238</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1543019942238</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1082,7 +872,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164326000" />
+    <option name="totallyTimeSpent" value="205764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1096,21 +886,20 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39935064" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4383117" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49377915" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.49377915" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35281384" sideWeight="0.83825815" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5245536" sideWeight="0.83825815" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.4968896" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2765625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32188842" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1119,6 +908,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1134,7 +924,12 @@
     </ignored-roots>
     <MESSAGE value="2018-10-20" />
     <MESSAGE value="提交zuul服务" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交zuul服务" />
+    <MESSAGE value="提交aspect" />
+    <MESSAGE value="提交zuul-filter" />
+    <MESSAGE value="提交sdk及mail" />
+    <MESSAGE value="提交log" />
+    <MESSAGE value="提交dbconfig" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交dbconfig" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1146,247 +941,193 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="9" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/base-server/src/main/java/com/ignore/json/test/TestAlibabaJson.java">
+    <entry file="file://$PROJECT_DIR$/hystrix-server/src/main/java/com/ignore/server/service/ProduceService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        <state relative-caret-position="412">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base-server/src/main/java/com/ignore/json/alibaba/service/AlibabaJsonDeserialService.java">
+    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/application-eureka.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        <state relative-caret-position="278">
+          <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base-server/src/main/java/com/ignore/json/alibaba/service/AlibabaJsonSerialService.java">
+    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/resources/application.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        <state relative-caret-position="467">
+          <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hystrix-server/src/main/java/com/ignore/server/controller/ProduceController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/zuul/zuul-core/1.3.0/zuul-core-1.3.0-sources.jar!/com/netflix/zuul/ZuulFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="182">
+          <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-client/src/main/java/com/ignore/client/EurekaClientApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="29" column="20" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="29" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base-server/src/main/java/com/ignore/annotation/self/service/SelfDefine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="17" column="35" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/lang/annotation/RetentionPolicy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="781">
-          <caret line="55" column="4" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjweaver/1.8.13/aspectjweaver-1.8.13.jar!/org/aspectj/lang/annotation/Pointcut.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjweaver/1.8.13/aspectjweaver-1.8.13.jar!/org/aspectj/lang/JoinPoint.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mail-server/src/main/resources/application.xml" />
-    <entry file="file://$PROJECT_DIR$/hystrix-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="23" column="21" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="23" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base-server/src/main/resources/application.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base-sdk/src/main/java/com/ignore/utils/aop/aspect/log/TraceLogAspectHandler.java" />
-    <entry file="file://$PROJECT_DIR$/base-sdk/src/main/java/com/ignore/SdkServerApplication.java" />
-    <entry file="file://$PROJECT_DIR$/base-sdk/src/main/resources/application.yaml" />
-    <entry file="file://$PROJECT_DIR$/base-sdk/src/main/java/com/ignore/utils/aop/aspect/log/InputOutputLog.java" />
-    <entry file="file://$PROJECT_DIR$/base-sdk/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/ZuulApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.13.RELEASE/spring-context-4.3.13.RELEASE-sources.jar!/org/springframework/context/annotation/ComponentScan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="58" column="18" lean-forward="false" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.7/log4j-api-2.7.jar!/org/apache/logging/log4j/Logger.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="176" column="9" lean-forward="false" selection-start-line="176" selection-start-column="9" selection-end-line="176" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/SdkServerApplication.java">
+    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/zuul/filter/RouteFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
-          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding />
+          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/pointcut/PointCutService.java">
+    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/zuul/filter/PostFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="30" column="58" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="58" />
-          <folding />
+        <state relative-caret-position="378">
+          <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/aspect/log/trace/TraceLogAspectHandler.java">
+    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/zuul/filter/ErrorFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="803">
-          <caret line="50" column="9" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="50" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="378">
+          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/aspect/log/db/DbOutputLog.java">
+    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/zuul/filter/PreFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="-295">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base-server/src/main/java/com/ignore/spring/aop/aspect/AspectService.java">
+    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/ignore/zuul/filter/config/FilterConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1302">
-          <caret line="59" column="64" lean-forward="false" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="64" />
-          <folding />
+        <state relative-caret-position="432">
+          <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base-server/src/main/java/com/ignore/annotation/self/service/SelfDefineService.java">
+    <entry file="file://$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/enumerate/ServerEnum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="150" column="81" lean-forward="false" selection-start-line="150" selection-start-column="81" selection-end-line="150" selection-end-column="81" />
-          <folding />
+        <state relative-caret-position="54">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sdk-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mail-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="20" column="19" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="20" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/dto/common/dblog/DbLogDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="16" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/entity/common/dblog/DbLogEntity.java">
+    <entry file="file://$PROJECT_DIR$/log-server/src/main/java/com/ignore/log/dblog/service/DbLogService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="39" lean-forward="true" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
-          <folding />
+          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/dblog/service/DbLogService.java">
+    <entry file="file://$PROJECT_DIR$/log-server/src/main/java/com/ignore/log/dblog/service/impl/DbLogServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="48" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="48" />
-          <folding />
+        <state relative-caret-position="351">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/dblog/service/impl/DbLogServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/log-server/src/main/java/com/ignore/LogServerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#606#607#0" expanded="false" />
-            <element signature="e#646#647#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hystrix-server/src/main/java/com/HystrixApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="378">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-648">
-          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="33" />
+        <state relative-caret-position="571">
+          <caret line="186" column="26" lean-forward="false" selection-start-line="186" selection-start-column="16" selection-end-line="186" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/thread/async/config/AsyncConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/thread/common/CommonThreadExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/aop/log/DbOutputLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/aop/log/trace/TraceLogAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/druid-db-monitor/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/client/CommonServerClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/cons/CommonCharSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/thread/common/CommonAsyncConfigExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="707">
+          <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db-server/src/main/java/com/ignore/druid/config/DruidDbConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="88" column="45" lean-forward="false" selection-start-line="88" selection-start-column="45" selection-end-line="88" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db-server/src/main/java/com/ignore/druid/config/DruidMonitorConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1458">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1394,141 +1135,203 @@
     <entry file="file://$PROJECT_DIR$/mail-server/src/main/resources/application.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="47" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/port/port.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/enum/ServerEnum.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/enumerate/ServerEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding>
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/cons/ServerConfigConst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/dblog/controller/DbLogController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="28" column="40" lean-forward="false" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/client/CommonServerClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/aspect/log/db/async/WriteDbLogServiceAsync.java">
+    <entry file="file://$PROJECT_DIR$/mail-server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
-          <caret line="23" column="46" lean-forward="false" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+          <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdk-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka-server/src/main/resources/application.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/client/QueryServerClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/ioc/config/db/DbConfigFeignClientUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#673#674#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mail-server/src/main/java/com/ignore/mail/send/controller/SendMailController.java">
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/ioc/config/db/DbConfigHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        <state relative-caret-position="756">
+          <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
           <folding>
-            <element signature="e#702#703#0" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sdk-server/src/main/java/com/ignore/utils/aop/aspect/log/db/DbOutputLogAspectHandler.java">
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/ioc/config/db/DbConfigPostAwareAdpter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+        <state relative-caret-position="324">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/ioc/config/db/DbConfigValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/ioc/config/db/DbConfigIOCService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/ioc/CommonContextAware.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/ioc/SpringIOCService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/thread/async/AsyncConfigService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="33" column="18" lean-forward="false" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/thread/async/config/impl/AsyncThreadPoolConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/eureka-server/src/main/java/com/ignore/server/EurekaServerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/CommonServerApplication.java">
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/aop/log/db/async/WriteDbLogServiceAsync.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        <state relative-caret-position="405">
+          <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#643#644#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-server/src/main/resources/application.yaml">
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/thread/async/CommonAysncConfigTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="23" />
+        <state relative-caret-position="-559">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-server/src/main/java/com/ignore/common/spring/aop/log/db/DbLogAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-640">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-server/pom.xml">
+    <entry file="file://$PROJECT_DIR$/log-server/src/main/java/com/ignore/log/dblog/controller/DbLogController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state relative-caret-position="143">
+          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail-server/src/main/java/com/ignore/mail/send/controller/SendMailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="25" column="15" lean-forward="false" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail-server/src/main/java/com/ignore/MailServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mail-server/src/main/java/com/ignore/mail/MailServerApplication.java">
+    <entry file="file://$PROJECT_DIR$/query-server/src/main/java/com/ignore/QueryServerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        <state relative-caret-position="236">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/query-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/query-server/src/main/resources/application.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

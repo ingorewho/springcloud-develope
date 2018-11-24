@@ -11,10 +11,12 @@
         <module name="base-server" />
         <module name="common-server" />
         <module name="config-server" />
-        <module name="eurekaclient" />
+        <module name="db-server" />
         <module name="eurekaserver" />
         <module name="hystrix-server" />
+        <module name="log-server" />
         <module name="mail-server" />
+        <module name="query-server" />
         <module name="sdk-server" />
         <module name="zuul-server" />
       </profile>
@@ -24,11 +26,15 @@
       <module name="base-server" target="1.8" />
       <module name="common-server" target="1.8" />
       <module name="config-server" target="1.8" />
+      <module name="db-server" target="1.8" />
+      <module name="druid-db-monitor" target="1.6" />
       <module name="eurekaclient" target="1.8" />
       <module name="eurekaserver" target="1.8" />
       <module name="hystrix-server" target="1.8" />
       <module name="kettle-server" target="1.8" />
+      <module name="log-server" target="1.8" />
       <module name="mail-server" target="1.8" />
+      <module name="query-server" target="1.8" />
       <module name="sdk-server" target="1.8" />
       <module name="springcloud" target="1.8" />
       <module name="zuul-server" target="1.8" />

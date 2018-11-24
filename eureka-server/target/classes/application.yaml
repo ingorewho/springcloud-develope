@@ -10,4 +10,5 @@ eureka:
     fetch-registry: false
     register-with-eureka: false
   server:
+    #关闭保护机制
     enable-self-preservation: false

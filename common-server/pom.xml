@@ -10,13 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>common-server</artifactId>
-
+    <groupId>common-server</groupId>
     <dependencies>
         <dependency>
             <groupId>sdk-server</groupId>
             <artifactId>sdk-server</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
     </dependencies>
 </project>

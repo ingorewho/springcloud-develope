@@ -18,8 +18,8 @@ hystrix:
 ############ribbon配置##########
 #请求处理的超时时间
 ribbon.ReadTimeout: 60000
-#请求连接的超时时间
-ribbon.ConnectTimeout: 60000
+#请求连接的超时时间(要小于hystrix的超时设置)
+ribbon.ConnectTimeout: 20000
 # 对所有操作请求都进行重试
 ribbon.OkToRetryOnAllOperations: true
 # 切换实例的重试次数

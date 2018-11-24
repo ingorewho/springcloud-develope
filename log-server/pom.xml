@@ -9,19 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mail-server</artifactId>
-
+    <artifactId>log-server</artifactId>
+    <groupId>log-server</groupId>
     <dependencies>
         <dependency>
-            <groupId>common-server</groupId>
-            <artifactId>common-server</artifactId>
+            <groupId>sdk-server</groupId>
+            <artifactId>sdk-server</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <dependency>
-            <groupId>config-server</groupId>
-            <artifactId>config-server</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
 
+    </dependencies>
 </project>

@@ -1,5 +1,6 @@
 package com.ignore.utils.common;
 
+import com.ignore.cons.CommonCharSet;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

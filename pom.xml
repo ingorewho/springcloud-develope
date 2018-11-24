@@ -184,7 +184,9 @@
         <module>mail-server</module>
         <module>common-server</module>
         <module>query-server</module>
-        <module>druid-db-monitor</module>
+        <module>log-server</module>
+        <module>common-server</module>
+        <module>db-server</module>
     </modules>
 
 
