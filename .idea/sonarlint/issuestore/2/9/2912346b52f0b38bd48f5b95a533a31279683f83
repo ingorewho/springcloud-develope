@@ -1,32 +1,0 @@
-
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ã¸“Æøÿÿÿÿ8Íè×Ô,
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(Æäçø8¶ØÔ,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(Áù¢øÿÿÿÿ8Íè×Ô,
-\squid:S1854";Remove this useless assignment to local variable "stream3".(ˆúâşÿÿÿÿ8òÖÈÔ,
-Fsquid:S1612",Replace this lambda with a method reference.(ô‰Ë¢ùÿÿÿÿ
-Msquid:S1612",Replace this lambda with a method reference.(›ı±íşÿÿÿÿ8¢÷ÁÔ,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ø‡‹­ÿÿÿÿÿ8ƒÒìÔ,
-Msquid:S1612",Replace this lambda with a method reference.(Áù¢øÿÿÿÿ8Íè×Ô,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(›ı±íşÿÿÿÿ8ÏÁÔ,
-Fsquid:S1481"+Remove this unused "stream" local variable.(ú¹›o8âî¸Ô,
-\squid:S1854";Remove this useless assignment to local variable "stream1".(äÓÚøÿÿÿÿ8öôÄÔ,
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(²³Ô¤8«ÕÜÔ,
-Msquid:S1612",Replace this lambda with a method reference.(Ú¯Öˆúÿÿÿÿ8Íè×Ô,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(³ÀÊ‰øÿÿÿÿ8Ş¨ïÔ,
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(ü¦‡€8ÊéÙÔ,
-Msquid:S1612",Replace this lambda with a method reference.(¦ü„¥ûÿÿÿÿ8ƒİÀÔ,
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ú¯Öˆúÿÿÿÿ8Íè×Ô,
-psquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(•Ëû¥
-Usquid:S1854":Remove this useless assignment to local variable "stream".(ú¹›o8âî¸Ô,
-Msquid:S1481",Remove this unused "stream3" local variable.(ˆúâşÿÿÿÿ8òÖÈÔ,
-Msquid:S1612",Replace this lambda with a method reference.(Ã¸“Æøÿÿÿÿ8Íè×Ô,
-Msquid:S1481",Remove this unused "stream1" local variable.(äÓÚøÿÿÿÿ8öôÄÔ,

@@ -1,6 +1,0 @@
-
-csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(¾8ŞÖ²Õ,
-csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(¿øñ8äÃ²Õ,
-csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.( Óøú8ŞÖ²Õ,
-¢%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(¿øñ8Éó×²Õ,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ã¯¯Ü8Éó×²Õ,
