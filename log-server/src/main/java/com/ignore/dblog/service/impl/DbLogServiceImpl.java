@@ -1,6 +1,6 @@
-package com.ignore.common.dblog.service.impl;
+package com.ignore.dblog.service.impl;
 
-import com.ignore.common.dblog.service.DbLogService;
+import com.ignore.dblog.service.DbLogService;
 import com.ignore.entity.common.dblog.DbLogEntity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

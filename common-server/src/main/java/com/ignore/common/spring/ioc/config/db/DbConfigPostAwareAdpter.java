@@ -24,6 +24,9 @@ public class DbConfigPostAwareAdpter extends InstantiationAwareBeanPostProcessor
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+        if (bean.getClass().getName().contains("TestBean")){
+            logger.error("初始化TestBean");
+        }
         if (bean.getClass().getName().startsWith(PREFIX_BEAN_NAME)){
             logger.info("初始化完需要的bean后置操作, beanName={}", beanName);
             dbConfigHandler.setBeanNames(beanName);

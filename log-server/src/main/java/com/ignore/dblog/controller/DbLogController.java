@@ -1,7 +1,6 @@
-package com.ignore.common.dblog.controller;
+package com.ignore.dblog.controller;
 
-import com.ignore.common.dblog.service.DbLogService;
-import com.ignore.common.dblog.service.impl.DbLogServiceImpl;
+import com.ignore.dblog.service.impl.DbLogServiceImpl;
 import com.ignore.dto.common.dblog.DbLogDTO;
 import com.ignore.entity.common.dblog.DbLogEntity;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,0 +1,4 @@
+httpclient:
+  timeout:
+    connection: 10
+    read: 10

@@ -1,4 +1,4 @@
-package com.ignore.common.dblog.service;
+package com.ignore.dblog.service;
 
 import com.ignore.entity.common.dblog.DbLogEntity;
 
