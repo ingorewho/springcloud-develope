@@ -1,10 +1,11 @@
-package com.ignore.zuul.filter;
+package com.ignore.zuul.filter.pre;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -21,7 +22,7 @@ public class PreFilter extends ZuulFilter {
     @Override
     public String filterType() {
         //pre表示在路由之前进行过滤
-        return "pre";
+        return FilterConstants.PRE_TYPE;
     }
 
     @Override

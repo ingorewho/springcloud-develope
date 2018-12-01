@@ -1,6 +1,7 @@
-package com.ignore.zuul.filter;
+package com.ignore.zuul.filter.route;
 
 import com.netflix.zuul.ZuulFilter;
+import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 
 /**
  * Description： TODO
@@ -9,11 +10,11 @@ import com.netflix.zuul.ZuulFilter;
  * Copyright: Copyright (c) 2018
  * Version: 0.0.1
  */
-public class PostFilter extends ZuulFilter {
+public class RouteFilter extends ZuulFilter{
     @Override
     public String filterType() {
-        //post: 在 routing 和 error 过滤器之后被调用。
-        return "post";
+        //routing: 在路由请求时被调用。
+        return FilterConstants.ROUTE_TYPE;
     }
 
     @Override
