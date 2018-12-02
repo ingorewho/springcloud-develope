@@ -5,6 +5,7 @@ import com.ignore.zuul.filter.error.ErrorFilter;
 import com.ignore.zuul.filter.post.PostFilter;
 import com.ignore.zuul.filter.pre.PreFilter;
 import com.ignore.zuul.filter.route.RouteFilter;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.web.DefaultErrorAttributes;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,30 +18,31 @@ import org.springframework.context.annotation.Configuration;
  * Version: 0.0.1
  */
 @Configuration
-public class FilterConfig {
+@EnableAutoConfiguration
+public class ZuulFilterConfig {
 
-    @Bean
+    @Bean("commonPreFilter")
     public PreFilter preFilter(){
         return new PreFilter();
     }
 
-    @Bean
+    @Bean("commonErrorFilter")
     public ErrorFilter errorFilter(){
         return new ErrorFilter();
     }
 
-    @Bean
+    @Bean("commonPostFilter")
     public PostFilter postFilter(){
         return new PostFilter();
     }
 
-    @Bean
+    @Bean("commonRouteFilter")
     public RouteFilter routeFilter(){
         return new RouteFilter();
     }
 
-    @Bean
-    public DefaultErrorAttributes zuulErrorAtrributes(){
-        return new ZuulErrorAtrributes();
-    }
+//    @Bean
+//    public DefaultErrorAttributes zuulErrorAtrributes(){
+//        return new ZuulErrorAtrributes();
+//    }
 }

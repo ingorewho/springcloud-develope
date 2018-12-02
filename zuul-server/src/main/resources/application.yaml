@@ -5,7 +5,10 @@ spring:
     name: zuul-server
   profiles:
     active: eureka,log
-
+#如果想调用/routes接口 来查看路由规则，需要将安全管理配置为false
+management:
+  security:
+    enabled: false
 zuul:
 # 路由匹配规则是线性遍历配置，所以只能通过yaml文件来控制匹配顺序
   routes:
@@ -13,23 +16,23 @@ zuul:
 #     ant风格，?表示单个字符、*表示多个字符、**表示多级目录多个字符
 #  第一种配置方式(建议)，可以被HystrixCommand包装，实现线程隔离和断路器功能
       path: /api/**
-      serviceId: hystrix-server
+      serviceId: app-server
 #  第二种配置方式，将服务名放前面
 #    hystrix-server:
 #      path: /api/**
 # 本地跳转，只限于在zuul服务中进行路由
-    api-local:
-      path: /api/zuul/**
-      url: forward:/zuul
+#    api-local:
+#      path: /api/zuul/**
+#      url: forward:/zuul
 # 路由匹配规则会忽略如下配置的路径
-  ignored-patterns: /test/**
+#  ignored-patterns: /test/**
 # cookie问题，zuul默认会过滤Cookie、Set-cookie、Authorization等敏感信息，如何对指定路由开启自定义敏感头？
 # 方式一:对指定路由开启自定义敏感头
-    web:
-      customSensitiveHeaders: true
+#    web:
+#      customSensitiveHeaders: true
 # 方式二:将指定路由的敏感头设置为空
-      sensitiveHeaders: true
+#      sensitiveHeaders: true
 # 解决重定向问题，设置正确的host信息
-  addHostHeader: true
+#  addHostHeader: true
 # 默认开启重试机制(这里可以不写)
-  retryable: true
+#  retryable: true
