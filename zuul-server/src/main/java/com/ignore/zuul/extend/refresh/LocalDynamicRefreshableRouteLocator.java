@@ -1,5 +1,7 @@
 package com.ignore.zuul.extend.refresh;
 
+import org.apache.commons.configuration.ConfigurationException;
+import org.apache.commons.configuration.PropertiesConfiguration;
 import org.springframework.cloud.netflix.zuul.filters.ZuulProperties;
 
 import java.util.Map;
@@ -19,6 +21,12 @@ public class LocalDynamicRefreshableRouteLocator extends DynamicRefreshableRoute
 
     @Override
     protected Map<String, ZuulProperties.ZuulRoute> loadLocalRoutes() {
+        try {
+            PropertiesConfiguration propConfiguration = new PropertiesConfiguration("application.yaml");
+
+        } catch (ConfigurationException e) {
+            e.printStackTrace();
+        }
         Properties applicationProperties = new Properties();
         return null;
     }

@@ -30,7 +30,7 @@ public class CommonConfigPropertiesImportSelector implements ImportSelector{
         MultiValueMap<String, Object> attributes = metadata.getAllAnnotationAttributes(
                 EnableCommonConfigProperties.class.getName(), false);
         Object[] type = attributes == null ? null
-                : (Object[]) attributes.getFirst("value");
+                : (Object[]) attributes.getFirst("classes");
         if (type == null || type.length == 0) {
             return new String[]{};
         }
@@ -44,7 +44,7 @@ public class CommonConfigPropertiesImportSelector implements ImportSelector{
             MultiValueMap<String, Object> attributes = metadata
                     .getAllAnnotationAttributes(
                             EnableCommonConfigProperties.class.getName(), false);
-            List<Class<?>> types = collectClasses(attributes.get("value"));
+            List<Class<?>> types = collectClasses(attributes.get("classes"));
             for (Class<?> type : types) {
                 String prefix = extractPrefix(type);
                 String name = (StringUtils.hasText(prefix) ? prefix + "-" + type.getName()
