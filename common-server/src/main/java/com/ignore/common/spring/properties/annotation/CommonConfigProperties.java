@@ -3,7 +3,7 @@ package com.ignore.common.spring.properties.annotation;
 import java.lang.annotation.*;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 17:17 2018/12/5
  */
