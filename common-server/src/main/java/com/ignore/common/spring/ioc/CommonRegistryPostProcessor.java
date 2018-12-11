@@ -55,11 +55,11 @@ public abstract class CommonRegistryPostProcessor implements BeanDefinitionRegis
         int registryId = System.identityHashCode(registry);
         if (this.registriesPostProcessed.contains(registryId)) {
             throw new IllegalStateException(
-                    "postProcessBeanDefinitionRegistry already called on this post-processor against " + registry);
+                    "postProcessBeanDefinitionRegistry already called on this post-register against " + registry);
         }
         if (this.factoriesPostProcessed.contains(registryId)) {
             throw new IllegalStateException(
-                    "postProcessBeanFactory already called on this post-processor against " + registry);
+                    "postProcessBeanFactory already called on this post-register against " + registry);
         }
         this.registriesPostProcessed.add(registryId);
 
