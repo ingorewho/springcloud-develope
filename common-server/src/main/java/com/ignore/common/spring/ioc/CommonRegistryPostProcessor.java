@@ -14,8 +14,14 @@ import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProce
 import org.springframework.beans.factory.support.BeanNameGenerator;
 import org.springframework.context.annotation.AnnotationBeanNameGenerator;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
+import org.springframework.core.PriorityOrdered;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
+ * 提供一个模板
  * Description： BeanDefinitionRegistryPostProcessor继承BeanFactoryPostProcessor接口
  *               可以实现在bean实例化前修改bean元数据的功能，也可以注册自己实例化的bean
  * Author: ignore1992
@@ -23,29 +29,52 @@ import org.springframework.context.annotation.Configuration;
  * Copyright: Copyright (c) 2018
  * Version: 0.0.1
  */
-@Configuration
-public class CommonRegistryPostProcessor implements BeanDefinitionRegistryPostProcessor {
+public abstract class CommonRegistryPostProcessor implements BeanDefinitionRegistryPostProcessor,PriorityOrdered {
+    private final Set<Integer> registriesPostProcessed = new HashSet<Integer>();
+
+    private final Set<Integer> factoriesPostProcessed = new HashSet<Integer>();
 
     private BeanNameGenerator beanNameGenerator = new AnnotationBeanNameGenerator();
 
+    private String beanName;
+    private Class<?> clazz;
+
+    public CommonRegistryPostProcessor(String beanName, Class<?> clazz){
+        this.beanName = beanName;
+        this.clazz = clazz;
+    }
+
+    @Override
+    public int getOrder() {
+        //设置优先级为中
+        return 0;
+    }
+
     @Override
     public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {
-        String[] beanNameList = registry.getBeanDefinitionNames();
+        int registryId = System.identityHashCode(registry);
+        if (this.registriesPostProcessed.contains(registryId)) {
+            throw new IllegalStateException(
+                    "postProcessBeanDefinitionRegistry already called on this post-processor against " + registry);
+        }
+        if (this.factoriesPostProcessed.contains(registryId)) {
+            throw new IllegalStateException(
+                    "postProcessBeanFactory already called on this post-processor against " + registry);
+        }
+        this.registriesPostProcessed.add(registryId);
+
         //将自己创建的bean加入到Spring Bean注册表中，后面会实例化并自动放入容器中
-        registerBean(registry, "testBean", new BeanService().getClass());
+        registerBean(registry, beanName, clazz);
     }
 
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
+
         //可以在这里修改spring注册表已有的bean元配置数据
-        try {
-            BeanDefinition definition = beanFactory.getBeanDefinition("testBean");
-        }catch (NoSuchBeanDefinitionException e){
-            //测试
-        }
+
     }
 
-    private void registerBean(BeanDefinitionRegistry registry , String name , Class<?> beanClass) {
+    protected void registerBean(BeanDefinitionRegistry registry , String name , Class<?> beanClass) {
 
         AnnotatedBeanDefinition annotatedBeanDefinition = new AnnotatedGenericBeanDefinition(beanClass);
 

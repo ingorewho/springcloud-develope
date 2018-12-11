@@ -47,7 +47,12 @@ public class ReflectUtils {
         return result;
     }
 
-    private static List<Method> findDefaultMethodsOnInterfaces(Class<?> clazz){
+    /**
+     * 查询类接口的默认方法
+     * @param clazz
+     * @return
+     */
+    public static List<Method> findDefaultMethodsOnInterfaces(Class<?> clazz){
         List<Method> result = null;
         for (Class<?> ifz : clazz.getInterfaces()){
             for (Method ifMethod : ifz.getMethods()){
