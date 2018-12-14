@@ -13,6 +13,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 @EnableCommonConfigProperties(classes ={ZuulPropertiesConfig.class})
 public class ZuulApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ZuulApplication.class , args);
+        SpringApplication application = new SpringApplication(new Object[] { ZuulApplication.class });
+        application.run(args);
     }
 }
