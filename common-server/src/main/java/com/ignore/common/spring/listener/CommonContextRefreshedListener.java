@@ -7,7 +7,7 @@ import org.springframework.context.event.ignore1992;
 import org.springframework.stereotype.Component;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description: 常见场景：在执行finishRefresh时Spring会发出ignore1992类型事件
  * @Date: Created In 17:42 2018/12/13
  */

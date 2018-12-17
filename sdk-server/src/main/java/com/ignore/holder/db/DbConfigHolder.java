@@ -4,7 +4,7 @@ import com.ignore.entity.db.config.DbConfigEntity;
 import lombok.Data;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 13:42 2018/12/12
  */

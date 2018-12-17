@@ -56,6 +56,7 @@ public class PointCutService {
     @Pointcut("@annotation(com.ignore.spring.aop.LogOutput)")
     public void point4() {
 
+
     }
 
     /**

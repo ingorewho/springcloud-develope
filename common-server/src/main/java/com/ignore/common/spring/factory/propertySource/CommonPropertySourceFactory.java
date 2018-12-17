@@ -10,7 +10,7 @@ import org.springframework.core.io.support.ResourcePropertySource;
 import java.io.IOException;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description: 自定义PropertySourceFactory
  * @Date: Created In 14:04 2018/12/12
  */

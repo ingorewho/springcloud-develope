@@ -5,7 +5,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description: 在Spring整个启动过程中，加入监听器，用于监控Spring启动流程
  *                要自己配置在META-INF/spring.factory的org.springframework.boot.SpringApplicationRunListener下
  * @Date: Created In 17:50 2018/12/13
