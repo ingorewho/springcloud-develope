@@ -2,10 +2,7 @@ package com.ignore.common.thread.common;
 
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.concurrent.SynchronousQueue;
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -16,8 +13,9 @@ import java.util.concurrent.atomic.AtomicLong;
  */
 public class CommonThreadExecutor extends ThreadPoolExecutor {
 
-    public CommonThreadExecutor(int corePoolSize , int maxPoolSize , int keepAliveTime , String threadName) {
-        super(corePoolSize , maxPoolSize , keepAliveTime , TimeUnit.MILLISECONDS , new SynchronousQueue<>() , new InnerThreadFactory(threadName));
+    public CommonThreadExecutor(int corePoolSize , int maxPoolSize , int queueSize, int keepAliveTime , String threadName) {
+        //使用列表阻塞队列
+        super(corePoolSize , maxPoolSize , keepAliveTime , TimeUnit.MILLISECONDS , new LinkedBlockingDeque<>(queueSize), new InnerThreadFactory(threadName));
     }
 
     private static class InnerThreadFactory implements ThreadFactory {

@@ -1,5 +1,6 @@
 package com.ignore.common.thread.common;
 
+import com.ignore.common.thread.strategy.ThreadRejectLogHandler;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
@@ -21,6 +22,8 @@ public class CommonAsyncConfigExecutor {
     private int maxPoolSize;
     @Value("${thread.pool.keepAliveTime:10}")
     private int keepAliveTime;
+    @Value("${thread.pool.queuSize:1024}")
+    private int queueSize;
     /**
      * 默认为10.
      */
@@ -29,6 +32,9 @@ public class CommonAsyncConfigExecutor {
 
     @Bean("commonExecutorService")
     public ExecutorService getExecutorService() {
-        return new CommonThreadExecutor(corePoolSize , maxPoolSize , keepAliveTime , "common");
+        CommonThreadExecutor executor = new CommonThreadExecutor(corePoolSize , maxPoolSize , queueSize, keepAliveTime , "common");
+        //设置拒绝策略
+        executor.setRejectedExecutionHandler(new ThreadRejectLogHandler());
+        return executor;
     }
 }
