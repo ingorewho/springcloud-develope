@@ -10,10 +10,10 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @Author: ignore1992
- * @Description:
+ * @Description: 配置了之后，可能会导致一些ip发来的请求被拒绝
  * @Date: Created In 13:43 2018/11/22
  */
-@Configuration
+//@Configuration
 public class DruidMonitorConfig {
     @Value("${druid.login.username}")
     private String userName;
@@ -24,14 +24,14 @@ public class DruidMonitorConfig {
     @Value("${druid.deny.ips}")
     private String denyIps;
 
-    @Bean
+//    @Bean
     public ServletRegistrationBean registrationBean() {
         //添加初始化参数：initParams
         ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new StatViewServlet());
         //白名单：
-        servletRegistrationBean.addInitParameter("allow", allowIps);
+//        servletRegistrationBean.addInitParameter("allow", allowIps);
         //IP黑名单 (存在共同时，deny优先于allow) : 如果满足deny的话提示:Sorry, you are not permitted to view this page.
-        servletRegistrationBean.addInitParameter("deny", denyIps);
+//        servletRegistrationBean.addInitParameter("deny", denyIps);
         //登录查看信息的账号密码.
         servletRegistrationBean.addInitParameter("loginUsername", userName);
         servletRegistrationBean.addInitParameter("loginPassword", passWord);
@@ -42,7 +42,7 @@ public class DruidMonitorConfig {
         return servletRegistrationBean;
     }
 
-    @Bean
+//    @Bean
     public FilterRegistrationBean filterRegistrationBean() {
         FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean(new WebStatFilter());
         //添加过滤规则.
