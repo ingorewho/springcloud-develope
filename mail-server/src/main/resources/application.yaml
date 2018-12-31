@@ -1,7 +1,18 @@
-server:
-  port: 7004
 spring:
   application:
     name: mail-server
   profiles:
-    active: eureka,log,http
+    active: eureka,log,datasource
+  mail:
+    host: smtp.163.com
+    username: 17761256463@163.com
+    password: 111111
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+server:
+  port: 7004

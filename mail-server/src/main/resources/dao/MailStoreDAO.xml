@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!-- 指定dao -->
+<mapper namespace="com.ignore.mail.send.dao.MailStoreDAO">
+    <resultMap id="BaseResultMap" type="com.ignore.mail.send.entity.MailRecordEntity" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="from_pos" property="fromPos" jdbcType="VARCHAR" />
+        <result column="to_pos" property="toPos" jdbcType="VARCHAR" />
+        <result column="content" property="content" jdbcType="VARCHAR" />
+        <result column="send_result" property="sendResult" jdbcType="BOOLEAN" />
+    </resultMap>
+    <!--  id指定方法名  parameterType指定参数类型 useGeneratedKeys自动生成主键 keyProperty主键id   -->
+    <insert id="save" parameterType="com.ignore.mail.send.entity.MailRecordEntity" useGeneratedKeys="true" keyProperty="id">
+        insert into ignore_mail_record(from_pos,to_pos,content,send_result) VALUES(#{fromPos}, #{toPos},#{content}, #{sendResult})
+    </insert>
+
+</mapper>

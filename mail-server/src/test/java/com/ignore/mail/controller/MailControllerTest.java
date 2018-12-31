@@ -1,5 +1,6 @@
 package com.ignore.mail.controller;
 
+import com.ignore.dto.mail.SimpleMailDTO;
 import com.ignore.utils.common.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,8 +28,14 @@ public class MailControllerTest {
     @Test
     public void test() {
         RestTemplate template = new RestTemplate();
-        HttpEntity<String> entity = new HttpEntity<>("test");
-        ResponseEntity<String> response = template.postForEntity(url , entity , String.class);
+        SimpleMailDTO mailDTO = new SimpleMailDTO();
+        mailDTO.setFromPos("17761256463@163.com");
+        mailDTO.setToPos("17761256463@163.com");
+        mailDTO.setContent("test");
+        mailDTO.setSubject("test");
+        HttpEntity<SimpleMailDTO> entity = new HttpEntity<SimpleMailDTO>(mailDTO);
+        logger.info(url);
+        ResponseEntity<Boolean> response = template.postForEntity(url , entity , Boolean.class);
         logger.info("post请求结果:" + response.getBody());
     }
 }
