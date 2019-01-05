@@ -5,7 +5,6 @@ import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.Serializable;
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -46,8 +45,8 @@ public class ResultDTO<T extends Serializable> implements Serializable{
         this.data = data;
     }
 
-    public ResultDTO(Collection<? extends Serializable> data){
-        this.data = (T) data;
+    public ResultDTO(T  data){
+        this.data = data;
     }
 
     public boolean emptyData(){

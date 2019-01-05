@@ -10,4 +10,5 @@ package com.ignore.cons;
 public class ServerConfigConst {
     public static final String COMMON_SERVER = "common-server";
     public static final String QUERY_SERVER = "query-server";
+    public static final String OUTINTERFACE_SERVER = "outinterface-server";
 }

@@ -11,6 +11,13 @@
 
     <groupId>sdk-server</groupId>
     <artifactId>sdk-server</artifactId>
+
+    <properties>
+        <httpclient.version>4.5.3</httpclient.version>
+        <httpclient.core.version>4.4.8</httpclient.core.version>
+        <httpclient.httpmime.version>4.5.3</httpclient.httpmime.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -42,6 +49,22 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${httpclient.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>${httpclient.core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>${httpclient.httpmime.version}</version>
         </dependency>
     </dependencies>
 

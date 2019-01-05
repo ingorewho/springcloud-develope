@@ -4,6 +4,7 @@ public enum ServerEnum {
     MAIL_SERVER("mail-server" , "7004"),
     COMMON_SERVER("common-server" , "7006");
 
+
     private String name;
     private String port;
 
