@@ -1,11 +1,8 @@
 package com.ignore.mail.send.controller;
 
-import com.ignore.common.spring.aop.log.DbOutputLog;
+import com.ignore.common.spring.aop.log.OutputLog;
 import com.ignore.dto.mail.SimpleMailDTO;
 import com.ignore.mail.send.service.impl.SendSimpleMailServiceImpl;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.slf4j.Log4jMarker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,7 +23,7 @@ public class SendMailController {
     private SendSimpleMailServiceImpl sendSimpleMailServiceImpl;
 
     @PostMapping("/send/simple")
-    @DbOutputLog(desc = "发生简单邮件", dbLog = true)
+    @OutputLog(desc = "发生简单邮件", dbLog = true)
     public boolean sendSimpleMail(@RequestBody SimpleMailDTO mailDTO) {
         return sendSimpleMailServiceImpl.sendMail(mailDTO);
     }
