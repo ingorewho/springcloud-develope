@@ -184,6 +184,8 @@
         <module>log-server</module>
         <module>common-server</module>
         <module>db-server</module>
+        <module>weather-server</module>
+        <module>outinterface-server</module>
     </modules>
 
 
