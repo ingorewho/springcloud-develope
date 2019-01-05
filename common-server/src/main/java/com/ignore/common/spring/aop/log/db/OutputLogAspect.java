@@ -1,6 +1,6 @@
 package com.ignore.common.spring.aop.log.db;
 
-import com.ignore.common.spring.aop.log.DbOutputLog;
+import com.ignore.common.spring.aop.log.OutputLog;
 import com.ignore.common.spring.aop.log.db.async.WriteDbLogServiceAsync;
 import com.ignore.dto.common.dblog.DbLogDTO;
 import org.apache.commons.lang3.StringUtils;
@@ -25,14 +25,13 @@ import java.util.Map;
  */
 @Aspect
 @Component
-public class DbLogAspect {
+public class OutputLogAspect {
     private Logger logger = LogManager.getLogger();
     @Autowired
     private WriteDbLogServiceAsync writeDbLogServiceAsync;
 
-    @Around("@annotation(dbOutputLog)")
-    public Object dbLog(ProceedingJoinPoint point , DbOutputLog dbOutputLog) throws Throwable {
-        logger.info("进入!");
+    @Around("@annotation(outputLog)")
+    public Object dbLog(ProceedingJoinPoint point , OutputLog outputLog) throws Throwable {
         //获取方法实例
         Signature signature = point.getSignature();
         //获取调用方法全名称:包名.类名.方法名
@@ -57,7 +56,8 @@ public class DbLogAspect {
             throw e;
         }
         finally {
-            if (dbOutputLog.dbLog()) {
+            logger.info("类名:{},调用方法名:{},参数:{},耗时:{}ms" , className , methodName , args , cost);
+            if (outputLog.dbLog()) {
                 DbLogDTO dbLogDTO = new DbLogDTO();
                 dbLogDTO.setArgs(StringUtils.join(args , ","));
                 dbLogDTO.setCaller(caller);

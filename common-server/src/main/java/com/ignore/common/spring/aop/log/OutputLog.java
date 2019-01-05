@@ -5,7 +5,7 @@ import java.lang.annotation.*;
 @Target({ElementType.METHOD})
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
-public @interface DbOutputLog {
+public @interface OutputLog {
 
     /**
      * 日志类型
