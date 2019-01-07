@@ -2,11 +2,13 @@ package com.ignore.common.client;
 
 import com.ignore.common.client.fallback.QueryServerClientFallBack;
 import com.ignore.cons.ServerConfigConst;
+import com.ignore.dto.ResultDTO;
 import com.ignore.entity.db.config.DbConfigEntity;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,5 +21,5 @@ import java.util.List;
 public interface QueryServerClient {
 
     @PostMapping("/dbconfig/query/all")
-    List<DbConfigEntity> getAllConfigs();
+    ResultDTO<ArrayList<DbConfigEntity>> getAllConfigs();
 }
