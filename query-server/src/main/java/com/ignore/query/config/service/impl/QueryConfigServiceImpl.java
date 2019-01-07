@@ -4,6 +4,7 @@ import com.ignore.entity.db.config.DbConfigEntity;
 import com.ignore.query.config.service.QueryConfigService;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,6 +16,6 @@ import java.util.List;
 public class QueryConfigServiceImpl implements QueryConfigService{
     @Override
     public List<DbConfigEntity> getAllConfigs() {
-        return null;
+        return new ArrayList<DbConfigEntity>();
     }
 }

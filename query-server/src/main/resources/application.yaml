@@ -4,4 +4,4 @@ spring:
   application:
     name: query-server
   profiles:
-    active: eureka,datasource,log
+    active: eureka,log

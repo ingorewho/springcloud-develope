@@ -13,8 +13,8 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication
 @EnableEurekaClient
-@ComponentScan("com.ignore")
 @EnableFeignClients("com.ignore")
+@ComponentScan("com.ignore")
 public class QueryServerApplication {
     public static void main(String[] args){
         SpringApplication.run(QueryServerApplication.class, args);
