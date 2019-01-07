@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 12:44 2018/12/17
  */

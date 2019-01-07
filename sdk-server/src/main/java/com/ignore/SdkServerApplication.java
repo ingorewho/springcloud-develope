@@ -3,6 +3,7 @@ package com.ignore;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * Description： sdk服务
@@ -13,6 +14,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  */
 @SpringBootApplication
 @EnableEurekaClient
+@ComponentScan
 public class SdkServerApplication {
     public static void main(String[] args) {
         SpringApplication.run(SdkServerApplication.class , args);
