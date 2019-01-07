@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: store-server
+  profiles:
+    active: eureka, log
+server:
+  port: 7009

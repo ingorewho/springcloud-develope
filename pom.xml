@@ -186,6 +186,7 @@
         <module>db-server</module>
         <module>weather-server</module>
         <module>outinterface-server</module>
+        <module>store-server</module>
     </modules>
 
 

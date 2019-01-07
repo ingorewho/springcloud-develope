@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!-- 指定dao -->
+<mapper namespace="com.ignore.store.user.dao.UserStoreDAO">
+    <resultMap id="BaseResultMap" type="com.ignore.entity.store.user.UserEntity" >
+        <id column="user_id" property="userId" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="age" property="age" jdbcType="INTEGER" />
+    </resultMap>
+    <!--  id指定方法名  parameterType指定参数类型 useGeneratedKeys自动生成主键 keyProperty主键id   -->
+    <insert id="save" parameterType="com.ignore.entity.store.user.UserEntity" useGeneratedKeys="true" keyProperty="user_id">
+        insert into test_user(name,age) VALUES(#{name},#{age})
+    </insert>
+
+    <update id="update" parameterType="com.ignore.entity.store.user.UserEntity">
+        UPDATE test_user
+          SET
+            name=#{name}
+          WHERE
+            user_id=#{userId}
+    </update>
+
+    <update id="updateByName" parameterType="com.ignore.entity.store.user.UserEntity">
+        UPDATE test_user
+          SET
+            age=#{age}
+        WHERE
+            name=#{name}
+    </update>
+</mapper>
