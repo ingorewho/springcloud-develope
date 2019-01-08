@@ -28,7 +28,7 @@ spring:
 
 # 配置mybatis
 mybatis:
-  mapperLocations: classpath:dao/*.xml
+  mapperLocations: classpath:dao/**/*.xml
 
 druid:
   login:
