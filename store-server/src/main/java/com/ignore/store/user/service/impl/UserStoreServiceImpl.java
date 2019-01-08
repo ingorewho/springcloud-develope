@@ -7,6 +7,7 @@ import com.ignore.store.user.service.UserStoreService;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -32,7 +33,10 @@ public class UserStoreServiceImpl implements UserStoreService{
     }
 
     @Override
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    /**
+     * 设置事务传播类型为REQUEST_NEW类型，设置事务隔离级别为RR级别，事务超时限制为30秒
+     */
+    @Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.REPEATABLE_READ, timeout = 30)
     public Integer updateUser(UserEntity user) {
         int count = userStoreDAO.update(user);
         return count;
