@@ -9,7 +9,7 @@ import lombok.Data;
  */
 @Data
 public class UserEntity {
-    private long userId;
+    private int userId;
     private String name;
     private int age;
 }
