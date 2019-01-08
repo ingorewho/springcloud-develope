@@ -2,6 +2,7 @@ package com.ignore.store.user.dao;
 
 import com.ignore.entity.store.user.UserEntity;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -12,11 +13,11 @@ import java.util.List;
  */
 @Mapper
 public interface UserStoreDAO {
-    int save(List<UserEntity> users);
+    Integer save(@Param("list") List<UserEntity> list);
 
-    int update(UserEntity user);
+    Integer update(UserEntity user);
 
-    int updateByName(UserEntity user);
+    Integer updateByName(UserEntity user);
 
-    int delete(UserEntity user);
+    Integer delete(UserEntity user);
 }

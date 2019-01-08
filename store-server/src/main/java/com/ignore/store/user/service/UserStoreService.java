@@ -10,5 +10,7 @@ import java.util.List;
  * @Date: Created In 16:03 2019/1/7
  */
 public interface UserStoreService {
-    int saveUser(List<UserEntity> users);
+    Integer saveUser(List<UserEntity> users);
+
+    Integer updateUser(UserEntity user);
 }

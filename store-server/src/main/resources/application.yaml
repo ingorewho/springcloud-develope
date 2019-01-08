@@ -2,6 +2,10 @@ spring:
   application:
     name: store-server
   profiles:
-    active: eureka, log
+    active: eureka,log,datasource
 server:
   port: 7009
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

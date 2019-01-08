@@ -1,6 +1,5 @@
 package com.ignore.store.user.controller;
 
-import com.ignore.cons.ServerConfigConst;
 import com.ignore.dto.ResultDTO;
 import com.ignore.entity.store.user.UserEntity;
 import com.ignore.store.user.service.UserStoreService;
@@ -26,5 +25,10 @@ public class UserStoreController {
     @PostMapping(value = "/user/insert")
     public ResultDTO<Integer> saveUser(@RequestBody List<UserEntity> users){
         return new ResultDTO<>(userStoreService.saveUser(users));
+    }
+
+    @PostMapping(value = "/user/update")
+    public ResultDTO<Integer> updateUser(@RequestBody UserEntity user){
+        return new ResultDTO<>(userStoreService.updateUser(user));
     }
 }
