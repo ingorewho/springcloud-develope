@@ -187,6 +187,7 @@
         <module>weather-server</module>
         <module>outinterface-server</module>
         <module>store-server</module>
+        <module>soul-server</module>
     </modules>
 
 

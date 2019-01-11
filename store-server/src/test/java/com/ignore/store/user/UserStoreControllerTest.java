@@ -24,8 +24,8 @@ public class UserStoreControllerTest {
         entity.setAge(8);
         entity.setUserId(4);
         users.add(entity);
-        String url = "http://localhost:7009/store/user/update";
-        ResponseEntity<Object> responseEntity = template.postForEntity(url, entity, Object.class);
+        String url = "http://localhost:7009/store/user/insert";
+        ResponseEntity<Object> responseEntity = template.postForEntity(url, users, Object.class);
         System.out.println(responseEntity.getBody());
     }
 }
