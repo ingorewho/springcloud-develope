@@ -13,7 +13,7 @@ import java.util.List;
  * @Description: QueryServerClient的服务降级逻辑
  * @Date: Created In 10:07 2018/11/26
  */
-public class QueryServerClientFallBack implements QueryServerClient{
+public class QueryServerClientFallback implements QueryServerClient{
     private Logger logger = LogManager.getLogger();
     @Override
     public List<DbConfigEntity> getAllConfigs() {
