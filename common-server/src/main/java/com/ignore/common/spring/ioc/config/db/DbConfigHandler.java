@@ -37,7 +37,7 @@ public class DbConfigHandler{
         List<DbConfigEntity> configs = null;
         try {
             QueryServerClient queryServerClient = DbConfigFeignClientUtils.getQueryServerClient();
-            configs = queryServerClient.getAllConfigs();
+            configs = queryServerClient.getAllConfigs().getData();
         }catch (Exception e){
             //发生Feign异常，打印异常然后return，考虑到query-server自己启动时会一直有问题，暂时未找到解决办法
             logger.error("获取query-server服务异常!");

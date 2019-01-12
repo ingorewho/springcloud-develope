@@ -6,3 +6,4 @@ sdk-server:7005
 common-server:7006
 query-server:7007
 outinterface-server:7008
+store-server:7009

@@ -9,24 +9,23 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>query-server</artifactId>
+    <artifactId>store-server</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>sdk-server</groupId>
-            <artifactId>sdk-server</artifactId>
+            <groupId>common-server</groupId>
+            <artifactId>common-server</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
         <dependency>
             <groupId>config-server</groupId>
             <artifactId>config-server</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>db-server</groupId>-->
-            <!--<artifactId>db-server</artifactId>-->
-            <!--<version>1.0-SNAPSHOT</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>db-server</groupId>
+            <artifactId>db-server</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>
