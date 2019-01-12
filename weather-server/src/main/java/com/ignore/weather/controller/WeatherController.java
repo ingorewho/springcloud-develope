@@ -20,6 +20,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class WeatherController {
     @PostMapping(value = "/weather/option")
     public ResultDTO<WeatherOption> getWeatherOption(WeatherReqParam weatherReqParam){
-
+        return null;
     }
 }
