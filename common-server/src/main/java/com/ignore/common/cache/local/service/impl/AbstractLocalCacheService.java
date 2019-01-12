@@ -1,12 +1,11 @@
-package com.ignore.common.cache.local.impl;
+package com.ignore.common.cache.local.service.impl;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-import com.ignore.common.cache.local.LocalCacheService;
-import com.ignore.common.cache.local.container.CacheContainer;
+import com.ignore.common.cache.local.interceptor.generator.LocalCacheKeyGenerator;
+import com.ignore.common.cache.local.interceptor.resolver.LocalCacheResolver;
+import com.ignore.common.cache.local.service.LocalCacheService;
+import com.ignore.common.cache.local.support.container.CacheContainer;
 import com.ignore.response.cache.CacheResult;
 import com.ignore.response.cache.CacheValue;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.util.Assert;
@@ -26,7 +25,8 @@ public abstract class AbstractLocalCacheService<K, V> implements LocalCacheServi
     protected CacheContainer container;
     /**二级缓存初始容量大小.**/
     protected int cacheInitSize;
-    private static final int DEFAULT_CACHE_INITSIZE = 256;
+    /**缓存解析器.**/
+    protected LocalCacheResolver<V> cacheResolver;
 
     public AbstractLocalCacheService(){
         //初始化容器
@@ -40,11 +40,7 @@ public abstract class AbstractLocalCacheService<K, V> implements LocalCacheServi
         Assert.isNull(key, "存放数据到本地缓存,key为null.");
 
         try {
-            //计算有效期
-            long expireTime = System.currentTimeMillis() + expireInterval * 10000L;
-            CacheValue<V> cacheValue = new CacheValue<>(value, expireTime);
-            String jsonValue = JSON.toJSONString(cacheValue);
-            container.put(key, jsonValue);
+            container.put(key, cacheResolver.serialValue(value, expireInterval));
         }catch (Exception e){
             logger.error("存放数据到本地缓存发生异常.", e);
             return new CacheResult<>(key, value, false, "执行put操作发生异常.");
@@ -59,16 +55,13 @@ public abstract class AbstractLocalCacheService<K, V> implements LocalCacheServi
         V value = null;
         try {
             String result = container.remove(key);
-            if (StringUtils.isNotBlank(result)){
-                CacheValue<V> cacheValue = JSONObject.toJavaObject(JSON.parseObject(result), CacheValue.class);
-                value = cacheValue.getValue();
-                return new CacheResult<>(key, value, true, null);
-            }
+            CacheValue<V> cacheValue = cacheResolver.deserialValue(result);
+            value = cacheValue.getValue();
+            return new CacheResult<>(key, value, true, null);
         }catch (Exception e){
             logger.error("存放数据到本地缓存发生异常.", e);
             return new CacheResult<>(key, value, false, "执行remove操作发生异常.");
         }
-        return new CacheResult<>(key, value, false, null);
     }
 
 
@@ -79,18 +72,16 @@ public abstract class AbstractLocalCacheService<K, V> implements LocalCacheServi
         V value = null;
         try {
             String result = container.get(key);
-            if (StringUtils.isNotBlank(result)){
-                CacheValue<V> cacheValue = JSONObject.toJavaObject(JSON.parseObject(result), CacheValue.class);
-                if (cacheValue.getExpireTime() >= System.currentTimeMillis()){
-                    //数据未过期
-                    value = cacheValue.getValue();
-                    return new CacheResult<>(key, value, true, null);
-                }
+            CacheValue<V> cacheValue = cacheResolver.deserialValue(result);
+            if (cacheValue.getExpireTime() >= System.currentTimeMillis()){
+                //数据未过期
+                value = cacheValue.getValue();
+                return new CacheResult<>(key, value, true, null);
             }
+            return new CacheResult<>(key, value, false, null);
         }catch (Exception e){
             logger.error("存放数据到本地缓存发生异常.", e);
             return new CacheResult<>(key, value, false, "执行remove操作发生异常.");
         }
-        return new CacheResult<>(key, value, false, null);
     }
 }

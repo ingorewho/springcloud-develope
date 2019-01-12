@@ -1,6 +1,6 @@
-package com.ignore.common.cache.local.container;
+package com.ignore.common.cache.local.support.container;
 
-import com.ignore.common.cache.local.container.impl.SafeMapCacheContainer;
+import com.ignore.common.cache.local.support.container.impl.SafeMapCacheContainer;
 
 /**
  * @Author: ignore1992

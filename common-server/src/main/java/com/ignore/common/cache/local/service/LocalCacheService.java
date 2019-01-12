@@ -1,4 +1,4 @@
-package com.ignore.common.cache.local;
+package com.ignore.common.cache.local.service;
 
 import com.ignore.response.cache.CacheResult;
 
