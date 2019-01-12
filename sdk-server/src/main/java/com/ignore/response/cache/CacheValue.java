@@ -2,6 +2,7 @@ package com.ignore.response.cache;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @Author: ignore1992
@@ -10,9 +11,11 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class CacheValue<V> {
     /**缓存value值.**/
     private V value;
     /**缓存有效期时间戳.**/
     private long expireTime;
+
 }
