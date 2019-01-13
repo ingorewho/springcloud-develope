@@ -1,5 +1,7 @@
 package com.ignore.common.cache.local.support.annotation;
 
+import com.ignore.common.cache.local.support.annotation.enumeration.CacheServiceEnum;
+import com.ignore.common.cache.local.support.annotation.enumeration.KeyGeneratorEnum;
 import org.springframework.core.annotation.AliasFor;
 
 import java.lang.annotation.*;
@@ -14,15 +16,23 @@ import java.lang.annotation.*;
 @Inherited
 @Documented
 public @interface LocalCacheable{
-    @AliasFor("cacheNames")
-    String[] value() default {};
+    @AliasFor("type")
+    CacheServiceEnum value() default CacheServiceEnum.SAFE_MAP;
 
     @AliasFor("value")
-    String[] cacheNames() default {};
+    CacheServiceEnum type() default CacheServiceEnum.SAFE_MAP;
 
+    /**
+     * 指定key的生成器
+     * @return
+     */
+    KeyGeneratorEnum keyGenerator() default KeyGeneratorEnum.SIMPLE;
+
+    /**
+     * 显示地指定key值
+     * @return
+     */
     String key() default "";
-
-    String keyGenerator() default "";
 
     String cacheManager() default "";
 

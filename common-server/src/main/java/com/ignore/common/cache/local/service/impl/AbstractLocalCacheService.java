@@ -1,7 +1,6 @@
 package com.ignore.common.cache.local.service.impl;
 
-import com.ignore.common.cache.local.interceptor.generator.LocalCacheKeyGenerator;
-import com.ignore.common.cache.local.interceptor.resolver.LocalCacheResolver;
+import com.ignore.common.cache.local.support.interceptor.resolver.LocalCacheResolver;
 import com.ignore.common.cache.local.service.LocalCacheService;
 import com.ignore.common.cache.local.support.container.CacheContainer;
 import com.ignore.response.cache.CacheResult;

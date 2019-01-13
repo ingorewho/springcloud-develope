@@ -1,7 +1,7 @@
 package com.ignore.common.cache;
 
 import com.ignore.common.cache.redis.config.CommonRedisTemplate;
-import com.ignore.common.cache.redis.handler.RedisCacheErrorHandler;
+import com.ignore.common.cache.redis.support.handler.RedisCacheErrorHandler;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
