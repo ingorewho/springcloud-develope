@@ -1,6 +1,6 @@
 package com.ignore.mail.send.controller;
 
-import com.ignore.common.spring.aop.log.OutputLog;
+import com.ignore.common.frame.spring.aop.log.OutputLog;
 import com.ignore.dto.mail.SimpleMailDTO;
 import com.ignore.mail.send.service.impl.SendSimpleMailServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
