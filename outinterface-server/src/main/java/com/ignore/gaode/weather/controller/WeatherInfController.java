@@ -1,6 +1,6 @@
 package com.ignore.gaode.weather.controller;
 
-import com.ignore.common.spring.aop.log.OutputLog;
+import com.ignore.common.frame.spring.aop.log.OutputLog;
 import com.ignore.cons.ServerConfigConst;
 import com.ignore.dto.ResultDTO;
 import com.ignore.gaode.weather.service.WeatherInfService;
