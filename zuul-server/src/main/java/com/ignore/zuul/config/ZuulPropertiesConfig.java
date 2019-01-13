@@ -1,14 +1,9 @@
 package com.ignore.zuul.config;
 
-import com.ignore.common.spring.factory.propertySource.CommonPropertySourceFactory;
-import com.ignore.common.spring.properties.annotation.CommonConfigProperties;
-import com.ignore.common.spring.properties.annotation.EnableCommonConfigProperties;
+import com.ignore.common.frame.spring.factory.propertySource.CommonPropertySourceFactory;
+import com.ignore.common.frame.spring.properties.annotation.CommonConfigProperties;
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.stereotype.Component;
 
 /**
  * @Author: ignore1992

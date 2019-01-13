@@ -1,6 +1,6 @@
 package com.ignore;
 
-import com.ignore.common.spring.properties.annotation.EnableCommonConfigProperties;
+import com.ignore.common.frame.spring.properties.annotation.EnableCommonConfigProperties;
 import com.ignore.zuul.config.ZuulPropertiesConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
