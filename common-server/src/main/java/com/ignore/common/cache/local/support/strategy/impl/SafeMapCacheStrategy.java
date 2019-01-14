@@ -1,8 +1,9 @@
 package com.ignore.common.cache.local.support.strategy.impl;
 
 import com.ignore.common.cache.local.support.annotation.LocalCacheable;
-import com.ignore.common.cache.local.support.interceptor.generator.DefaultLocalCacheKeyGenerator;
-import com.ignore.common.cache.local.support.interceptor.generator.SimpleLocalCacheKeyGenerator;
+import com.ignore.common.cache.local.support.interceptor.generator.CacheKeyGenerator;
+import com.ignore.common.cache.local.support.interceptor.generator.impl.DefaultLocalCacheKeyGenerator;
+import com.ignore.common.cache.local.support.interceptor.generator.impl.SimpleLocalCacheKeyGenerator;
 import com.ignore.common.cache.local.support.strategy.LocalCacheableStrategy;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.cache.interceptor.KeyGenerator;
@@ -15,7 +16,7 @@ import org.springframework.cache.interceptor.KeyGenerator;
 public class SafeMapCacheStrategy implements LocalCacheableStrategy{
 
     @Override
-    public KeyGenerator getKeyGenerator(LocalCacheable localCacheable) {
+    public CacheKeyGenerator getKeyGenerator(LocalCacheable localCacheable) {
         if (StringUtils.isNotBlank(localCacheable.key())){
             //指定了key值则不使用key生成器
             return null;

@@ -34,11 +34,9 @@ public @interface LocalCacheable{
      */
     String key() default "";
 
-    String cacheManager() default "";
-
-    String cacheResolver() default "";
-
-    String condition() default "";
-
-    String unless() default "";
+    /**
+     * 默认十秒有效期
+     * @return
+     */
+    int expireInterval() default 10;
 }

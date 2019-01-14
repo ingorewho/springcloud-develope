@@ -1,5 +1,6 @@
 package com.ignore.common.cache.redis.config;
 
+import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
@@ -8,7 +9,6 @@ import org.springframework.stereotype.Component;
  * @Description:
  * @Date: Created In 21:05 2018/11/27
  */
-@Component
-public class CommonRedisTemplate extends RedisTemplate{
+public class RedisConfigTemplate<K, V> extends RedisTemplate<K, V>{
 
 }

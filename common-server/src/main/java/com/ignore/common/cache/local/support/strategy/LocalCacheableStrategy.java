@@ -1,6 +1,7 @@
 package com.ignore.common.cache.local.support.strategy;
 
 import com.ignore.common.cache.local.support.annotation.LocalCacheable;
+import com.ignore.common.cache.local.support.interceptor.generator.CacheKeyGenerator;
 import org.springframework.cache.interceptor.KeyGenerator;
 
 /**
@@ -10,5 +11,5 @@ import org.springframework.cache.interceptor.KeyGenerator;
  */
 public interface LocalCacheableStrategy {
 
-    KeyGenerator getKeyGenerator(LocalCacheable localCacheable);
+    CacheKeyGenerator getKeyGenerator(LocalCacheable localCacheable);
 }

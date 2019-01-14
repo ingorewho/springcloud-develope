@@ -1,8 +1,8 @@
 package com.ignore.common.cache.local.service.impl;
 
-import com.ignore.common.cache.local.support.interceptor.resolver.LocalCacheResolver;
 import com.ignore.common.cache.local.service.LocalCacheService;
 import com.ignore.common.cache.local.support.container.CacheContainer;
+import com.ignore.common.cache.local.support.interceptor.resolver.LocalCacheResolver;
 import com.ignore.response.cache.CacheResult;
 import com.ignore.response.cache.CacheValue;
 import org.apache.logging.log4j.LogManager;
@@ -36,7 +36,7 @@ public abstract class AbstractLocalCacheService<K, V> implements LocalCacheServi
 
     @Override
     public CacheResult<K, V> put(K key , V value, int expireInterval) {
-        Assert.isNull(key, "存放数据到本地缓存,key为null.");
+        Assert.notNull(key , "存放数据到本地缓存,key为null.");
 
         try {
             container.put(key, cacheResolver.serialValue(value, expireInterval));
@@ -49,7 +49,7 @@ public abstract class AbstractLocalCacheService<K, V> implements LocalCacheServi
 
     @Override
     public CacheResult<K, V> remove(K key) {
-        Assert.isNull(key, "删除本地缓存,key为null.");
+        Assert.notNull(key, "删除本地缓存,key为null.");
 
         V value = null;
         try {
@@ -66,7 +66,7 @@ public abstract class AbstractLocalCacheService<K, V> implements LocalCacheServi
 
     @Override
     public CacheResult<K, V> get(K key) {
-        Assert.isNull(key, "获取本地缓存,key为null.");
+        Assert.notNull(key, "获取本地缓存,key为null.");
 
         V value = null;
         try {
