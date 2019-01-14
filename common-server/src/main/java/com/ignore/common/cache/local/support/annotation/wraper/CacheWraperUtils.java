@@ -3,7 +3,7 @@ package com.ignore.common.cache.local.support.annotation.wraper;
 import org.aspectj.lang.ProceedingJoinPoint;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 16:02 2019/1/14
  */

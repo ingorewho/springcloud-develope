@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import org.aspectj.lang.Signature;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description:
  * @Date: Created In 15:56 2019/1/14
  */
