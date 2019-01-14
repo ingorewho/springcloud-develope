@@ -67,4 +67,10 @@ server:
     basedir: .
     max-threads: 500
 
+##设置redis配置
+spring.redis:
+    hostName: 127.0.0.1
+    port: 6379
+    timeout: 10000
+
 
