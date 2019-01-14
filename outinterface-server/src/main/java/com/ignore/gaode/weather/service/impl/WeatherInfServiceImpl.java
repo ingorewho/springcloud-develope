@@ -1,5 +1,6 @@
 package com.ignore.gaode.weather.service.impl;
 
+import com.ignore.common.cache.local.support.annotation.LocalCacheable;
 import com.ignore.common.net.http.HttpClientService;
 import com.ignore.gaode.weather.service.WeatherInfService;
 import com.ignore.parameter.outinterface.gaode.WeatherReqParam;
@@ -32,6 +33,7 @@ public class WeatherInfServiceImpl implements WeatherInfService{
     private HttpClientService httpClientService;
 
     @Override
+    @LocalCacheable()
     public String queryWeather(WeatherReqParam reqParam) {
         String result = null;
         try {
