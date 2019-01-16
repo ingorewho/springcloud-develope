@@ -17,5 +17,4 @@ public class CacheValue<V> {
     private V value;
     /**缓存有效期时间戳.**/
     private long expireTime;
-
 }

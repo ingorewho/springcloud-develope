@@ -12,11 +12,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CacheResult<K, V> {
+public class CacheResult{
     /**缓存key.**/
-    private K key;
+    private String key;
     /**缓存value.**/
-    private V value;
+    private Object value;
     /**缓存是否成功.**/
     private boolean success;
     /**缓存异常信息.**/

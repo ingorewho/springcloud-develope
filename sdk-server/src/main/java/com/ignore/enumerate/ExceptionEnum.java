@@ -8,7 +8,10 @@ package com.ignore.enumerate;
  * Version: 0.0.1
  */
 public enum  ExceptionEnum {
-    MAIL_SEND_ERROR(001, "发生邮件失败!");
+    MAIL_SEND_ERROR(001, "发生邮件失败!"),
+    CACHE_PUT_ERROR(002, "本地缓存put异常"),
+    CACHE_GET_ERROR(003, "本地缓存get异常"),
+    CACHE_REMOVE_ERROR(004, "本地缓存remove异常");
 
     private int code;
     private String desc;
