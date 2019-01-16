@@ -21,8 +21,8 @@ public class SafeMapCacheContainer extends AbstractCacheContainer<String> {
     }
 
     @Override
-    public void put(String key, String value) {
-        safeMapCache.put(key, value);
+    public String put(String key, String value) {
+        return safeMapCache.put(key, value);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.ignore.common.cache.local.support.annotation;
 
+import com.ignore.common.cache.local.support.annotation.enumeration.CacheResolverEnum;
 import com.ignore.common.cache.local.support.annotation.enumeration.CacheServiceEnum;
 import com.ignore.common.cache.local.support.annotation.enumeration.KeyGeneratorEnum;
 import org.springframework.core.annotation.AliasFor;
@@ -29,6 +30,12 @@ public @interface LocalCacheable{
     KeyGeneratorEnum keyGenerator() default KeyGeneratorEnum.SIMPLE;
 
     /**
+     * 指定缓存解析器
+     * @return
+     */
+    CacheResolverEnum cacheResolver() default CacheResolverEnum.SIMPLE;
+
+    /**
      * 显示地指定key值
      * @return
      */
@@ -39,4 +46,10 @@ public @interface LocalCacheable{
      * @return
      */
     int expireInterval() default 10;
+
+    /**
+     * value类型
+     * @return
+     */
+    Class<?> valueType() default String.class;
 }

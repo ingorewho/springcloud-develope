@@ -5,7 +5,7 @@ package com.ignore.common.cache.local.service.impl;
  * @Description: 默认本地缓存服务
  * @Date: 2019/1/13
  */
-public class DefaultCacheService extends AbstractLocalCacheService<String, Object>{
+public class DefaultCacheService extends AbstractLocalCacheService{
     @Override
     protected void initialize() {
 

@@ -3,7 +3,6 @@ package com.ignore.common.cache.local.service.impl;
 import com.ignore.common.cache.local.support.container.CacheContainerDefinition;
 import com.ignore.common.cache.local.support.container.CacheContainerEnum;
 import com.ignore.common.cache.local.support.container.CacheContainerFactory;
-import com.ignore.common.cache.local.support.interceptor.resolver.impl.LocalSimpleCacheResolver;
 import com.ignore.utils.common.DateUtils;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +12,7 @@ import org.springframework.stereotype.Service;
  * @Date: 2019/1/12
  */
 @Service()
-public class SafeMapCacheService extends AbstractLocalCacheService<String, Object>{
+public class SafeMapCacheService extends AbstractLocalCacheService{
     /**默认容器大小**/
     private static final int DEFAULT_SAFE_MAPCAHE_SIZE = 256;
     /**默认有效期无限期.**/
@@ -33,7 +32,6 @@ public class SafeMapCacheService extends AbstractLocalCacheService<String, Objec
         }
         CacheContainerDefinition definition = new CacheContainerDefinition(CacheContainerEnum.SAFEMAP_CACHE_CONTAINER, cacheInitSize);
         container = CacheContainerFactory.getContainer(definition);
-        cacheResolver = new LocalSimpleCacheResolver<>();
     }
 
 }

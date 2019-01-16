@@ -14,7 +14,7 @@ import org.aspectj.lang.Signature;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CacheWraper {
+public class CacheKey {
     /**执行对象**/
     private Object target;
     /**方法对象**/

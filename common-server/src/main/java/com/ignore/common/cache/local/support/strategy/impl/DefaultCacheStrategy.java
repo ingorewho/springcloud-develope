@@ -2,21 +2,23 @@ package com.ignore.common.cache.local.support.strategy.impl;
 
 import com.ignore.common.cache.local.service.impl.AbstractLocalCacheService;
 import com.ignore.common.cache.local.service.impl.DefaultCacheService;
-import com.ignore.common.cache.local.service.impl.SafeMapCacheService;
 import com.ignore.common.cache.local.support.annotation.LocalCacheable;
+import com.ignore.common.cache.local.support.interceptor.generator.CacheKeyGenerator;
+import com.ignore.common.cache.local.support.interceptor.resolver.CacheVauleResolver;
 
 /**
  * @Author: ignore1992
- * @Description: 安全map缓存策略
- * @Date: 2019/1/13
+ * @Description: 默认缓存策略
+ * @Date: Created In 16:03 2019/1/15
  */
-public class SafeMapCacheStrategy extends AbstractCacheStrategy{
-    public SafeMapCacheStrategy(LocalCacheable localCacheable){
+public class DefaultCacheStrategy extends AbstractCacheStrategy{
+
+    public DefaultCacheStrategy(LocalCacheable localCacheable){
         super(localCacheable);
     }
 
     @Override
     public Class<? extends AbstractLocalCacheService> getCacheServiceClass() {
-        return SafeMapCacheService.class;
+        return DefaultCacheService.class;
     }
 }

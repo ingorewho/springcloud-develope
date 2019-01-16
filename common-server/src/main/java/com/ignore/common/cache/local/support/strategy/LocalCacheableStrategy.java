@@ -1,8 +1,9 @@
 package com.ignore.common.cache.local.support.strategy;
 
-import com.ignore.common.cache.local.support.annotation.LocalCacheable;
+import com.ignore.common.cache.local.service.LocalCacheService;
+import com.ignore.common.cache.local.service.impl.AbstractLocalCacheService;
 import com.ignore.common.cache.local.support.interceptor.generator.CacheKeyGenerator;
-import org.springframework.cache.interceptor.KeyGenerator;
+import com.ignore.common.cache.local.support.interceptor.resolver.CacheVauleResolver;
 
 /**
  * @Author: ignore1992
@@ -10,6 +11,9 @@ import org.springframework.cache.interceptor.KeyGenerator;
  * @Date: 2019/1/13
  */
 public interface LocalCacheableStrategy {
+    CacheKeyGenerator getKeyGenerator();
 
-    CacheKeyGenerator getKeyGenerator(LocalCacheable localCacheable);
+    CacheVauleResolver getCacheResolver();
+
+    Class<? extends AbstractLocalCacheService> getCacheServiceClass();
 }

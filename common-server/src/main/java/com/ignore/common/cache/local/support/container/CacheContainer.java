@@ -5,7 +5,7 @@ package com.ignore.common.cache.local.support.container;
  */
 public interface CacheContainer<K> {
 
-    void put(K key, String value);
+    String put(K key, String value);
 
     String remove(K key);
 

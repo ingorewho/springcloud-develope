@@ -1,7 +1,7 @@
 package com.ignore.common.cache.local.support.interceptor.generator.impl;
 
+import com.ignore.common.cache.local.support.annotation.wraper.CacheKey;
 import com.ignore.utils.common.Md5Utils;
-import org.aspectj.lang.Signature;
 
 /**
  * @Author: ignore1992
@@ -10,12 +10,12 @@ import org.aspectj.lang.Signature;
  */
 public class SimpleLocalCacheKeyGenerator extends AbstractLocalCacheKeyGenerator{
     @Override
-    public Object generate(Object target, Signature method, Object... params) {
+    public String generate(CacheKey cacheKey) {
         //根据类名+方法名+参数名作为key
         StringBuffer sb = new StringBuffer();
-        sb.append(target.getClass().getName());
-        sb.append(method.getName());
-        for (Object obj : params) {
+        sb.append(cacheKey.getTarget().getClass().getName());
+        sb.append(cacheKey.getSignature().getName());
+        for (Object obj : cacheKey.getParams()) {
             sb.append(obj.toString());
         }
         //对得到的key进行md5加密

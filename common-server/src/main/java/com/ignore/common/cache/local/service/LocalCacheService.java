@@ -1,11 +1,30 @@
 package com.ignore.common.cache.local.service;
 
-import com.ignore.response.cache.CacheResult;
+/**
+ * @Author: ignore1992
+ * @Description: 本地缓存接口类
+ * @Date: Created In 16:57 2019/1/11
+ */
+public interface LocalCacheService {
+    /**
+     * 执行put操作，返回value值
+     * @param key
+     * @param value
+     * @return
+     */
+    String put(String key , String value);
 
-public interface LocalCacheService<K, V> {
-    CacheResult<K, V> put(K key , V value, int expireInterval);
+    /**
+     * 执行remove操作，返回value值
+     * @param key
+     * @return
+     */
+    String remove(String key);
 
-    CacheResult<K, V> remove(K key);
-
-    CacheResult<K, V> get(K key);
+    /**
+     * 执行get操作，返回value值
+     * @param key
+     * @return
+     */
+    String get(String key);
 }

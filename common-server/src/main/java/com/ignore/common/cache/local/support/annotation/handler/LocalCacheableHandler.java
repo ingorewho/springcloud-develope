@@ -1,17 +1,17 @@
 package com.ignore.common.cache.local.support.annotation.handler;
 
 import com.ignore.common.cache.local.service.LocalCacheService;
-import com.ignore.common.cache.local.service.impl.AbstractLocalCacheService;
-import com.ignore.common.cache.local.service.impl.DefaultCacheService;
-import com.ignore.common.cache.local.service.impl.SafeMapCacheService;
 import com.ignore.common.cache.local.support.annotation.LocalCacheable;
-import com.ignore.common.cache.local.support.annotation.wraper.CacheWraper;
+import com.ignore.common.cache.local.support.annotation.wraper.CacheKeyUtils;
 import com.ignore.common.cache.local.support.interceptor.generator.CacheKeyGenerator;
+import com.ignore.common.cache.local.support.interceptor.resolver.CacheVauleResolver;
+import com.ignore.common.cache.local.support.strategy.CacheStrategyUtils;
 import com.ignore.common.cache.local.support.strategy.LocalCacheableStrategy;
-import com.ignore.common.cache.local.support.strategy.impl.SafeMapCacheStrategy;
 import com.ignore.common.frame.spring.ioc.CommonContextAware;
-import com.ignore.response.cache.CacheResult;
 import com.ignore.response.cache.CacheValue;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -24,59 +24,50 @@ import org.springframework.stereotype.Component;
 public class LocalCacheableHandler{
     @Autowired
     private CommonContextAware commonContextAware;
+    private Logger logger = LogManager.getLogger();
 
     /**
-     * 前置操作，主要用于get缓存
-     * @param wraper
+     * 缓存处理
+     * @param joinPoint
      * @param localCacheable
      * @return
+     * @throws Throwable
      */
-    public CacheResult preHandle(CacheWraper wraper, LocalCacheable localCacheable){
-        LocalCacheableStrategy strategy = getCacheableStrategy(localCacheable);
-        CacheKeyGenerator keyGenerator = strategy.getKeyGenerator(localCacheable);
+    public Object handle(ProceedingJoinPoint joinPoint, LocalCacheable localCacheable)throws Throwable{
+        //1.生成缓存策略
+        LocalCacheableStrategy strategy = CacheStrategyUtils.getCacheableStrategy(localCacheable);
+        CacheKeyGenerator keyGenerator = strategy.getKeyGenerator();
+        CacheVauleResolver cacheResolver = strategy.getCacheResolver();
+        Class cacheServiceClass = strategy.getCacheServiceClass();
+        LocalCacheService localCacheService = (LocalCacheService)commonContextAware.getSelfApplicationContext().getBean(cacheServiceClass);
+
+        //2.生成key
         String key = localCacheable.key();
         if (keyGenerator != null){
-            key = keyGenerator.generate(wraper.getTarget(), wraper.getSignature(),wraper.getParams()).toString();
+            key = keyGenerator.generate(CacheKeyUtils.getCacheWraperNoResult(joinPoint));
         }
-        Class beanClazz = getCacheServiceClass(localCacheable);
-        LocalCacheService localCacheService = (LocalCacheService)commonContextAware.getSelfApplicationContext().getBean(beanClazz);
-        return localCacheService.get(key);
+
+        //3.从本地缓存中获取结果
+        String result = localCacheService.get(key);
+        //4.解析结果
+        CacheValue cacheValue = cacheResolver.deserialValue(result);
+        Object value = cacheValue.getValue();
+        if (value != null){
+            logger.info("查询本地缓存成功, key={}, value={}", key, cacheValue.getValue());
+        }
+        else {
+            //本地缓存未命中，执行方法，然后缓存
+            value = joinPoint.proceed();
+            if (value != null){
+                //5.使用解析器生成value值
+                String newValue = cacheResolver.serialValue(value, localCacheable.expireInterval());
+                //6.缓存结果
+                localCacheService.put(key, newValue);
+            }
+        }
+        return value;
     }
 
-    /**
-     * 后置操作，主要用于更新缓存
-     * @param wraper
-     * @param localCacheable
-     * @return
-     */
-    public CacheResult postHandle(CacheWraper wraper, LocalCacheable localCacheable){
-        LocalCacheableStrategy strategy = getCacheableStrategy(localCacheable);
-        CacheKeyGenerator keyGenerator = strategy.getKeyGenerator(localCacheable);
-        String key = localCacheable.key();
-        if (keyGenerator != null){
-            key = keyGenerator.generate(wraper.getTarget(), wraper.getSignature(),wraper.getParams()).toString();
-        }
-        Class beanClazz = getCacheServiceClass(localCacheable);
-        LocalCacheService localCacheService = (LocalCacheService)commonContextAware.getSelfApplicationContext().getBean(beanClazz);
-        return localCacheService.put(key, wraper.getResult(), localCacheable.expireInterval());
-    }
 
-    private LocalCacheableStrategy getCacheableStrategy(LocalCacheable localCacheable){
-        switch (localCacheable.type()){
-            case SAFE_MAP:
-                return new SafeMapCacheStrategy();
-            default:
-                return new SafeMapCacheStrategy();
-        }
-    }
-
-    private Class<? extends AbstractLocalCacheService> getCacheServiceClass(LocalCacheable localCacheable){
-        switch (localCacheable.value()){
-            case SAFE_MAP:
-                return SafeMapCacheService.class;
-            default:
-                return DefaultCacheService.class;
-        }
-    }
 
 }

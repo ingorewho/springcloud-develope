@@ -1,8 +1,6 @@
 package com.ignore.common.cache.local.support.interceptor.generator;
 
-import org.aspectj.lang.Signature;
-
-import java.lang.reflect.Method;
+import com.ignore.common.cache.local.support.annotation.wraper.CacheKey;
 
 /**
  * @Author: ignore1992
@@ -10,5 +8,5 @@ import java.lang.reflect.Method;
  * @Date: Created In 15:41 2019/1/14
  */
 public interface CacheKeyGenerator {
-    Object generate(Object target, Signature signature, Object... params);
+    String generate(CacheKey cacheKey);
 }
