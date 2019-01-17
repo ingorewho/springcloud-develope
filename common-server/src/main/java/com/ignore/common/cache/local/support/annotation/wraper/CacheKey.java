@@ -1,6 +1,5 @@
 package com.ignore.common.cache.local.support.annotation.wraper;
 
-import javafx.beans.binding.ObjectExpression;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,6 +20,4 @@ public class CacheKey {
     private Signature signature;
     /**参数数组**/
     private Object[] params;
-    /**缓存结果**/
-    private Object result;
 }

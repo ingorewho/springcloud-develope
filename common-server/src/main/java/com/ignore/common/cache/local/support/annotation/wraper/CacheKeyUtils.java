@@ -8,15 +8,8 @@ import org.aspectj.lang.ProceedingJoinPoint;
  * @Date: Created In 16:02 2019/1/14
  */
 public class CacheKeyUtils {
-    public static CacheKey getCacheWraperEmpty(){
-        return new CacheKey();
-    }
 
-    public static CacheKey getCacheWraperNoResult(ProceedingJoinPoint point){
-        return new CacheKey(point.getTarget(), point.getSignature(),point.getArgs(), null);
-    }
-
-    public static CacheKey getCacheWraperWithResult(ProceedingJoinPoint point, Object result){
-        return new CacheKey(point.getTarget(), point.getSignature(),point.getArgs(), result);
+    public static CacheKey getCacheKey(ProceedingJoinPoint point){
+        return new CacheKey(point.getTarget(), point.getSignature(),point.getArgs());
     }
 }

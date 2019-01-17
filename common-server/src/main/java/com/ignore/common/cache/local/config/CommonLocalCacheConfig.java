@@ -19,7 +19,7 @@ public class CommonLocalCacheConfig extends LocalCacheConfigSupport {
     @Override
     @Bean
     public LocalCacheScheduler localCacheScheduler() {
-        RegularLocalCacheScheduler scheduler = new RegularLocalCacheScheduler();
-        return scheduler;
+//        RegularLocalCacheScheduler scheduler = new RegularLocalCacheScheduler();
+        return null;
     }
 }

@@ -49,7 +49,6 @@ public class RedisCacheConfig extends CachingConfigurerSupport {
         jackson2JsonRedisSerializer.setObjectMapper(om);
         //设置value的序列化器
         template.setValueSerializer(jackson2JsonRedisSerializer);
-        template.afterPropertiesSet();
     }
 
 

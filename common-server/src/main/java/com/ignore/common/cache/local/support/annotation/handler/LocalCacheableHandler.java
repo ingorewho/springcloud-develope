@@ -44,7 +44,7 @@ public class LocalCacheableHandler{
         //2.生成key
         String key = localCacheable.key();
         if (keyGenerator != null){
-            key = keyGenerator.generate(CacheKeyUtils.getCacheWraperNoResult(joinPoint));
+            key = keyGenerator.generate(CacheKeyUtils.getCacheKey(joinPoint));
         }
 
         //3.从本地缓存中获取结果
@@ -67,7 +67,5 @@ public class LocalCacheableHandler{
         }
         return value;
     }
-
-
 
 }

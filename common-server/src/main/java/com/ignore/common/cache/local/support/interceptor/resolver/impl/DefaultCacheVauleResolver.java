@@ -24,7 +24,7 @@ public class DefaultCacheVauleResolver extends AbstractCacheValueResolver{
 
     @Override
     public CacheValue deserialValue(String value) {
-        CacheValue cacheValue = new CacheValue<>();
+        CacheValue cacheValue = new CacheValue();
         cacheValue.setValue(value);
         return cacheValue;
     }

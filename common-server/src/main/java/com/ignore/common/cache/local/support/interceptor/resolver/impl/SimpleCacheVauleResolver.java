@@ -28,6 +28,8 @@ public class SimpleCacheVauleResolver extends AbstractCacheValueResolver{
     public CacheValue deserialValue(String value) {
         if (StringUtils.isNotBlank(value)){
             CacheValue cacheValue = JSONObject.toJavaObject(JSON.parseObject(value), CacheValue.class);
+            Class clzz = valueType.getClass();
+            cacheValue.setValue(JSONObject.parseObject(JSONObject.toJSONString(cacheValue.getValue()), valueType));
             if (cacheValue.getExpireTime() < System.currentTimeMillis()){
                 return emptyCacheValue;
             }
