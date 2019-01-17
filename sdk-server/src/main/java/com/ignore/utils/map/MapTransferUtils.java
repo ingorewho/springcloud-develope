@@ -5,11 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Description： map转换工具类
- * Author: ignore1992
- * Date: Created in 2019/1/5 18:00
- * Copyright: Copyright (c) 2018
- * Version: 0.0.1
+ * @author: ignore1992
+ * @Description： map转换工具类
+ * @Date: Created in 2019/1/5 18:00
  */
 public class MapTransferUtils {
 

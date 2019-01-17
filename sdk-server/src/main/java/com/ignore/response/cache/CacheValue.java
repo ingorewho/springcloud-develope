@@ -12,9 +12,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CacheValue<V> {
+public class CacheValue{
     /**缓存value值.**/
-    private V value;
+    private Object value;
     /**缓存有效期时间戳.**/
     private long expireTime;
 }
