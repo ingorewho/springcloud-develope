@@ -55,7 +55,6 @@ public abstract class AbstractLocalCacheService implements LocalCacheService{
         }
     }
 
-
     @Override
     public String get(String key) {
         Assert.notNull(key, "获取本地缓存,key为null.");
@@ -66,5 +65,10 @@ public abstract class AbstractLocalCacheService implements LocalCacheService{
             logger.error("获取本地缓存发生异常.", e);
             throw new LocalCacheException("获取本地缓存异常", ExceptionEnum.CACHE_GET_ERROR);
         }
+    }
+
+    @Override
+    public void removeAll() {
+        throw new UnsupportedOperationException("removeAll");
     }
 }

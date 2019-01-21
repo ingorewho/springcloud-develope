@@ -6,6 +6,8 @@ import com.ignore.common.cache.local.support.container.CacheContainerFactory;
 import com.ignore.utils.common.DateUtils;
 import org.springframework.stereotype.Service;
 
+import java.util.Iterator;
+
 /**
  * @Author: ignore1992
  * @Description: 使用安全的map实现二级缓存
@@ -34,4 +36,11 @@ public class SafeMapCacheService extends AbstractLocalCacheService{
         container = CacheContainerFactory.getContainer(definition);
     }
 
+    @Override
+    public void removeAll() {
+        Iterator iterator = container.iterator();
+        while (iterator.hasNext()){
+            iterator.remove();
+        }
+    }
 }

@@ -22,6 +22,11 @@ public interface LocalCacheService {
     String remove(String key);
 
     /**
+     * 删除容器中所有元素
+     * @see com.ignore.common.cache.local.support.container.CacheContainer
+     */
+    void removeAll();
+    /**
      * 执行get操作，返回value值
      * @param key
      * @return

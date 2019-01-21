@@ -1,5 +1,6 @@
 package com.ignore.common.cache.local.support.container.impl;
 
+import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -33,5 +34,10 @@ public class SafeMapCacheContainer extends AbstractCacheContainer<String> {
     @Override
     public String get(String key) {
         return safeMapCache.get(key);
+    }
+
+    @Override
+    public Iterator iterator() {
+        return safeMapCache.entrySet().iterator();
     }
 }
