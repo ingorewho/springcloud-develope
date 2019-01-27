@@ -17,6 +17,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class WeatherOption implements Serializable{
+
+    private static final long serialVersionUID = -8588574672073989698L;
     /**温馨提示.**/
     private String kindlyOption;
 }
