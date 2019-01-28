@@ -12,4 +12,5 @@ public class ServerConfigConst {
     public static final String QUERY_SERVER = "query-server";
     public static final String OUTINTERFACE_SERVER = "outinterface-server";
     public static final String WEATHER_SERVER = "weather-server";
+    public static final String MAIL_SERVER = "mail-server";
 }
