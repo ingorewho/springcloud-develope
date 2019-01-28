@@ -15,8 +15,15 @@ zuul:
     api:
 #     ant风格，?表示单个字符、*表示多个字符、**表示多级目录多个字符
 #  第一种配置方式(建议)，可以被HystrixCommand包装，实现线程隔离和断路器功能
-      path: /api/**
-      serviceId: app-server
+      path: /api/*
+      serviceId: outinterface-server
+hystrix:
+  command:
+    outinterface-server:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
 #  第二种配置方式，将服务名放前面
 #    hystrix-server:
 #      path: /api/**
