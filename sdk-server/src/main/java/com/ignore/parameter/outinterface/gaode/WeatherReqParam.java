@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.io.Serializable;
+
 /**
  * Description： 高德-天气查询参数类
  * Author: ignore1992
@@ -16,7 +18,8 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class WeatherReqParam {
+public class WeatherReqParam implements Serializable{
+    private static final long serialVersionUID = -9198549958740236770L;
     /**城市编码.**/
     private String city;
     /**气象类型可选值：base/all base:返回实况天 all:返回预报天气.**/

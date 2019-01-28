@@ -1,11 +1,9 @@
 package com.ignore.weather.controller;
 
-import com.ignore.cons.ServerConfigConst;
 import com.ignore.dto.ResultDTO;
 import com.ignore.options.weather.WeatherOption;
 import com.ignore.parameter.outinterface.gaode.WeatherReqParam;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -16,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
  * Version: 0.0.1
  */
 @RestController
-@RequestMapping(ServerConfigConst.WEATHER_SERVER)
 public class WeatherController {
     @PostMapping(value = "/weather/option")
     public ResultDTO<WeatherOption> getWeatherOption(WeatherReqParam weatherReqParam){
