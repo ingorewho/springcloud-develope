@@ -10,5 +10,7 @@ import com.ignore.scheduled.business.carepush.CareResult;
  * @Date: 2019/1/27
  */
 public interface CareHandleChain<T> {
-    CareResult handle(CareRequest<T> careRequest);
+    CareResult pull(CareRequest<T> careRequest);
+
+    boolean push(CareResult careResult);
 }

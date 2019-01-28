@@ -22,9 +22,10 @@ public class CarePushScheduler {
         CareRequest request = pull();
         List<CareHandleChain> chains = careHandleChainRegister.getChains();
         for (int i = 0; i< chains.size(); i++){
-            CareResult result = chains.get(i).handle(request);
+            CareResult result = chains.get(i).pull(request);
             if (result != null){
                 //根据不同策略推送人文关怀信息
+
             }
         }
     }

@@ -18,7 +18,7 @@ public abstract class AbstractCareHandleChain<T> implements CareHandleChain<T>{
     }
 
     @Override
-    public CareResult handle(CareRequest<T> careRequest) {
+    public CareResult pull(CareRequest<T> careRequest) {
         //检查careType是否对应的上
         if (careRequest != null && StringUtils.isNotBlank(careType) && careType.equals(this.careType)){
             CareResult result = new CareResult();

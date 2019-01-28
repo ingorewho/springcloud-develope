@@ -13,7 +13,7 @@ import java.util.List;
  */
 @Component
 public class CareHandleChainRegister {
-    private List<CareHandleChain> chains = Collections.synchronizedList(new ArrayList<>());
+    private List<CareHandleChain> chains = Collections.synchronizedList(new ArrayList<>(16));
 
     /**
      * 注册处理链
