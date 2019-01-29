@@ -56,7 +56,7 @@ public class OutputLogAspect {
             throw e;
         }
         finally {
-            logger.info("类名:{},调用方法名:{},参数:{},耗时:{}ms" , className , methodName , args , cost);
+            logger.info("类名:{},调用方法名:{},参数:{},返回值:{},耗时:{}ms" , className , methodName , args , response, cost);
             if (outputLog.dbLog()) {
                 DbLogDTO dbLogDTO = new DbLogDTO();
                 dbLogDTO.setArgs(StringUtils.join(args , ","));
