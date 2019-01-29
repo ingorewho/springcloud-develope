@@ -29,8 +29,8 @@ public class MailControllerTest {
     public void test() {
         RestTemplate template = new RestTemplate();
         SimpleMailDTO mailDTO = new SimpleMailDTO();
-        mailDTO.setFromPos("17761256463@163.com");
-        mailDTO.setToPos("17761256463@163.com");
+        mailDTO.setFromPos("2388891412@qq.com");
+        mailDTO.setToPos("2388891412@qq.com");
         mailDTO.setContent("test");
         mailDTO.setSubject("test");
         HttpEntity<SimpleMailDTO> entity = new HttpEntity<SimpleMailDTO>(mailDTO);

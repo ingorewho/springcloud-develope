@@ -16,7 +16,6 @@ import org.springframework.scheduling.annotation.EnableAsync;
  * Version: 0.0.1
  */
 @SpringBootApplication
-@EnableEurekaClient
 @ComponentScan("com.ignore")
 @EnableFeignClients("com.ignore")
 @EnableAsync

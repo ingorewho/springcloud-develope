@@ -11,10 +11,8 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
- * Description： TODO
  * Author: ignore1992
  * Date: Created in 2018/12/30 16:05
- * Copyright: Copyright (c) 2018
  * Version: 0.0.1
  */
 public abstract class AbstractSendMailService<T extends MailDTO> implements SendMailService<T>{
@@ -35,7 +33,7 @@ public abstract class AbstractSendMailService<T extends MailDTO> implements Send
         }finally {
             //记录发送邮件及结果到数据库
             MailRecordEntity recordEntity = transferRecord(mailDTO, result);
-            mailStoreDAO.save(recordEntity);
+//            mailStoreDAO.save(recordEntity);
         }
         return result;
     }

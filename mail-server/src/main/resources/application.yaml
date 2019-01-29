@@ -2,11 +2,12 @@ spring:
   application:
     name: mail-server
   profiles:
-    active: eureka,log,datasource
+    active: eureka, log, datasource
   mail:
-    host: smtp.163.com
-    username: 17761256463@163.com
-    password: 111111
+    host: smtp.qq.com
+    port: 587
+    username: 2388891412@qq.com
+    password: 111
     properties:
       mail:
         smtp:
