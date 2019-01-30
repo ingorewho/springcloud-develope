@@ -1,6 +1,8 @@
 package com.ignore.gaode.weather;
 
+import com.ignore.dto.ResultDTO;
 import com.ignore.parameter.outinterface.gaode.WeatherReqParam;
+import com.ignore.response.outinterface.gaode.weather.WeatherResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.http.HttpEntity;
@@ -23,7 +25,7 @@ public class WeatherControllerTest {
 
     @BeforeTest
     public void beforeTest() {
-        url = "http://localhost:7008/outinterface-server/weather/query";
+        url = "http://localhost:7008/weather/query";
     }
 
     @Test

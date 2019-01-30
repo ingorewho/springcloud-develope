@@ -1,9 +1,12 @@
 package com.ignore.gaode.weather.service.impl;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.ignore.common.cache.local.support.annotation.LocalCacheable;
 import com.ignore.common.net.http.HttpClientService;
 import com.ignore.gaode.weather.service.WeatherInfService;
 import com.ignore.parameter.outinterface.gaode.WeatherReqParam;
+import com.ignore.response.outinterface.gaode.weather.WeatherResponse;
 import com.ignore.utils.map.MapTransferUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -33,8 +36,8 @@ public class WeatherInfServiceImpl implements WeatherInfService{
     private HttpClientService httpClientService;
 
     @Override
-    @LocalCacheable()
-    public String queryWeather(WeatherReqParam reqParam) {
+    @LocalCacheable(expireInterval = 10 * 60000, valueType = WeatherResponse.class)
+    public WeatherResponse queryWeather(WeatherReqParam reqParam) {
         String result = null;
         try {
             Map<String, Object> param = MapTransferUtils.objectToMap(reqParam);
@@ -45,6 +48,7 @@ public class WeatherInfServiceImpl implements WeatherInfService{
         }catch (Exception e){
             logger.error("{天气查询}查询外部接口异常! 参数:", reqParam, e);
         }
-        return result;
+        WeatherResponse response = JSONObject.toJavaObject(JSON.parseObject(result), WeatherResponse.class);
+        return response;
     }
 }

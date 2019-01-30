@@ -5,6 +5,7 @@ import com.ignore.cons.ServerConfigConst;
 import com.ignore.dto.ResultDTO;
 import com.ignore.gaode.weather.service.WeatherInfService;
 import com.ignore.parameter.outinterface.gaode.WeatherReqParam;
+import com.ignore.response.outinterface.gaode.weather.WeatherResponse;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,14 +21,13 @@ import javax.annotation.Resource;
  * Version: 0.0.1
  */
 @RestController
-@RequestMapping(value = ServerConfigConst.OUTINTERFACE_SERVER)
 public class WeatherInfController {
     @Resource(name = "weatherInfServiceImpl")
     private WeatherInfService weatherInfService;
 
     @OutputLog(desc = "调用高德接口查询天气信息")
     @PostMapping(value = "/weather/query")
-    public ResultDTO<String> queryWeather(@RequestBody WeatherReqParam reqParam){
-        return new ResultDTO<String>(weatherInfService.queryWeather(reqParam));
+    public ResultDTO<WeatherResponse> queryWeather(@RequestBody WeatherReqParam reqParam){
+        return new ResultDTO<WeatherResponse>(weatherInfService.queryWeather(reqParam));
     }
 }
