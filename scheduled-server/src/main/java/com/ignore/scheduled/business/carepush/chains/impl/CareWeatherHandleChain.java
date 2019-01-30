@@ -1,10 +1,14 @@
 package com.ignore.scheduled.business.carepush.chains.impl;
 
+import com.ignore.dto.mail.SimpleMailDTO;
 import com.ignore.options.weather.WeatherOption;
 import com.ignore.parameter.outinterface.gaode.WeatherReqParam;
+import com.ignore.scheduled.business.carepush.CareEnum;
+import com.ignore.scheduled.business.carepush.CareResult;
 import com.ignore.scheduled.business.carepush.chains.CareHandleChainRegister;
 import com.ignore.scheduled.client.WeatherServerClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,12 +19,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class  CareWeatherHandleChain extends AbstractCareHandleChain<WeatherReqParam>{
     @Autowired
-    private CareHandleChainRegister careHandleChainRegister;
-    @Autowired
     private WeatherServerClient weatherServerClient;
 
-    public CareWeatherHandleChain(){
-        super("weather");
+    @Autowired
+    public CareWeatherHandleChain(CareHandleChainRegister careHandleChainRegister){
+        super(CareEnum.WEATHER);
         careHandleChainRegister.registChain(this);
     }
 
@@ -31,5 +34,10 @@ public class  CareWeatherHandleChain extends AbstractCareHandleChain<WeatherReqP
             return option.getKindlyOption();
         }
         return null;
+    }
+
+    @Value("${weather.chain.push.strategy:mail}")
+    public void setPushType(String strategy) {
+        super.strategyName = strategy;
     }
 }

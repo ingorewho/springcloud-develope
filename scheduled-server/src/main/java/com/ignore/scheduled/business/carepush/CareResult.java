@@ -12,7 +12,7 @@ import lombok.ToString;
 @ToString
 public class CareResult {
     /**类型**/
-    private String careType;
+    private CareEnum careType;
     /***提示信息*/
     private String option;
 }
