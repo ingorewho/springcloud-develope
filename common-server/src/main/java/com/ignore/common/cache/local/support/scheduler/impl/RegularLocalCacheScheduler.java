@@ -32,7 +32,7 @@ public class RegularLocalCacheScheduler implements LocalCacheScheduler, Applicat
 
 
     @Override
-    @Scheduled(cron = "0 0 0 ? * *")
+    @Scheduled(cron = "0 0 1 ? * *")
     public void clearTask() {
         logger.info("定时执行删除本地内存数据.");
         //定时每小时执行一次

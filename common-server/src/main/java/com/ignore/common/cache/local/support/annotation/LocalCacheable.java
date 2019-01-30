@@ -51,5 +51,5 @@ public @interface LocalCacheable{
      * value类型
      * @return
      */
-    Class<?> valueType() default String.class;
+    Class<?> valueType();
 }

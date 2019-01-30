@@ -5,6 +5,7 @@ import com.ignore.dto.ResultDTO;
 import com.ignore.entity.db.config.DbConfigEntity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Service;
 
 import javax.xml.transform.Result;
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ import java.util.List;
  * @Description: QueryServerClient的服务降级逻辑
  * @Date: Created In 10:07 2018/11/26
  */
+@Service
 public class QueryServerClientFallback implements QueryServerClient{
     private Logger logger = LogManager.getLogger();
     @Override

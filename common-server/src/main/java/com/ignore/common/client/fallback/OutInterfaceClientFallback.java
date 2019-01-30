@@ -7,6 +7,7 @@ import com.ignore.common.client.OutInterfaceClient;
 import com.ignore.dto.ResultDTO;
 import com.ignore.parameter.outinterface.gaode.WeatherReqParam;
 import com.ignore.response.outinterface.gaode.weather.WeatherResponse;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,6 +19,7 @@ import java.util.Map;
  * Copyright: Copyright (c) 2018
  * Version: 0.0.1
  */
+@Service
 public class OutInterfaceClientFallback implements OutInterfaceClient{
     @Override
     public ResultDTO<WeatherResponse> queryWeather(WeatherReqParam reqParam) {

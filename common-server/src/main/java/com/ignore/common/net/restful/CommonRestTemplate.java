@@ -14,10 +14,10 @@ import org.springframework.web.client.RestTemplate;
  */
 @Component
 public class CommonRestTemplate extends RestTemplate implements ApplicationListener<ApplicationReadyEvent>{
-    @Value("${httpclient.timeout.connection:2}")
+    @Value("${httpclient.timeout.connection:30}")
     private int connectTimeout;
 
-    @Value("${httpclient.timeout.read:8}")
+    @Value("${httpclient.timeout.read:30}")
     private int readTimeout;
 
     @Override
