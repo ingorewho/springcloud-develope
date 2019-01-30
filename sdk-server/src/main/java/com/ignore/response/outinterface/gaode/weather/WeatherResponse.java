@@ -3,6 +3,7 @@ package com.ignore.response.outinterface.gaode.weather;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Description： TODO
@@ -18,4 +19,5 @@ public class WeatherResponse implements Serializable{
     private int count;
     private String info;
     private String infocode;
+    private List<InnerData> lives;
 }

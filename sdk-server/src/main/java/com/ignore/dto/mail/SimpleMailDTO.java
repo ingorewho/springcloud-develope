@@ -15,4 +15,14 @@ import java.io.Serializable;
 public class SimpleMailDTO extends MailDTO implements Serializable{
     private static final long serialVersionUID = -3640305250893538785L;
     private String content;
+
+    @Override
+    public String toString() {
+        return "SimpleMailDTO{" +
+                "content='" + content + '\'' +
+                ", fromPos='" + fromPos + '\'' +
+                ", toPos='" + toPos + '\'' +
+                ", subject='" + subject + '\'' +
+                '}';
+    }
 }

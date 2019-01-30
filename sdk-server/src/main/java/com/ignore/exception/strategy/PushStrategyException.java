@@ -1,21 +1,21 @@
-package com.ignore.exception.mail;
+package com.ignore.exception.strategy;
 
 import com.ignore.enumerate.ExceptionEnum;
-import com.thoughtworks.xstream.core.BaseException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 /**
- * Author: ignore1992
- * Date: Created in 2018/12/30 16:20
+ * @Author: ignore1992
+ * @Description: 推送策略异常
+ * @Date: Created In 10:11 2019/1/30
  */
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 @Data
-public class MailException extends RuntimeException{
+public class PushStrategyException extends RuntimeException{
     private String msg;
     private ExceptionEnum exception;
 }

@@ -16,4 +16,14 @@ import java.io.Serializable;
 public class AttachMailDTO extends MailDTO implements Serializable{
     private static final long serialVersionUID = 7320151298197680648L;
     private File attachFile;
+
+    @Override
+    public String toString() {
+        return "AttachMailDTO{" +
+                "attachFile=" + attachFile +
+                ", fromPos='" + fromPos + '\'' +
+                ", toPos='" + toPos + '\'' +
+                ", subject='" + subject + '\'' +
+                '}';
+    }
 }

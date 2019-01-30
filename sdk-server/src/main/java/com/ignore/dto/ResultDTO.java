@@ -2,6 +2,7 @@ package com.ignore.dto;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.Serializable;
@@ -13,6 +14,7 @@ import java.util.Map;
  * @Description:
  * @Date: Created In 10:27 2018/12/17
  */
+@Data
 public class ResultDTO<T extends Serializable> implements Serializable{
     private static final long serialVersionUID = -4258704169730505904L;
 
@@ -58,27 +60,12 @@ public class ResultDTO<T extends Serializable> implements Serializable{
                 || data instanceof JSONArray && ((JSONArray)data).isEmpty();
     }
 
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
+    @Override
+    public String toString() {
+        return "ResultDTO{" +
+                "code=" + code +
+                ", msg='" + msg + '\'' +
+                ", data=" + data +
+                '}';
     }
 }

@@ -18,7 +18,7 @@ import java.io.Serializable;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class WeatherReqParam implements Serializable{
+public class WeatherReqParam implements Serializable, Cloneable{
     private static final long serialVersionUID = -9198549958740236770L;
     /**城市编码.**/
     private String city;
@@ -26,4 +26,15 @@ public class WeatherReqParam implements Serializable{
     private String extensions;
     /**返回格式.**/
     private String output;
+
+    @Override
+    public Object clone(){
+        Object o = null;
+        try {
+            o = super.clone();
+        }catch (CloneNotSupportedException e){
+            //do nothing
+        }
+        return o;
+    }
 }

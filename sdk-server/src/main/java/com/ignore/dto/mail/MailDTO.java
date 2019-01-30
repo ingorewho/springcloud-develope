@@ -9,7 +9,7 @@ import lombok.Data;
  */
 @Data
 public class MailDTO {
-    private String fromPos;
-    private String toPos;
-    private String subject;
+    protected String fromPos;
+    protected String toPos;
+    protected String subject;
 }
