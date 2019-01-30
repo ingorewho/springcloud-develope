@@ -5,7 +5,7 @@ import com.ignore.mail.send.entity.MailRecordEntity;
 import org.springframework.stereotype.Service;
 
 /**
- * @Author: renzhiqiang-lhq
+ * @Author: ignore1992
  * @Description: 暂未实现
  * @Date: Created In 14:55 2019/1/29
  */
